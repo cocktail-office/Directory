@@ -1,0 +1,143 @@
+{
+    attributes = (
+        {
+            columnName = "AGT_ANNEE"; 
+            externalType = CHAR; 
+            name = agtAnnee; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 4; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_FOUCONS"; 
+            externalType = VARCHAR2; 
+            name = agtFoucons; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_FOUCR"; 
+            externalType = VARCHAR2; 
+            name = agtFoucr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_FOUVAL"; 
+            externalType = VARCHAR2; 
+            name = agtFouval; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            columnName = "AGT_LOGIN"; 
+            externalType = VARCHAR2; 
+            name = agtLogin; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_MAIL"; 
+            externalType = VARCHAR2; 
+            name = agtMail; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 81; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_NOM"; 
+            externalType = VARCHAR2; 
+            name = agtNom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            columnName = "AGT_ORDRE"; 
+            externalType = NUMBER; 
+            name = agtOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_PRENOM"; 
+            externalType = VARCHAR2; 
+            name = agtPrenom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_FERMETURE"; 
+            externalType = DATE; 
+            name = utlFermeture; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_OUVERTURE"; 
+            externalType = DATE; 
+            name = utlOuverture; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        agtOrdre, 
+        agtNom, 
+        agtPrenom, 
+        agtLogin, 
+        agtMail, 
+        agtFoucons, 
+        agtFoucr, 
+        agtFouval, 
+        agtAnnee, 
+        utlOuverture, 
+        utlFermeture
+    ); 
+    className = "org.cocktail.directory.eof.server.EOVAgentFournisseur"; 
+    classProperties = (
+        agtOrdre, 
+        agtNom, 
+        agtPrenom, 
+        agtLogin, 
+        agtMail, 
+        agtFoucons, 
+        agtFoucr, 
+        agtFouval, 
+        agtAnnee, 
+        utlOuverture, 
+        utlFermeture
+    ); 
+    externalName = "V_AGENT_FOURNISSEUR"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            agtOrdre, 
+            agtNom, 
+            agtPrenom, 
+            agtLogin, 
+            agtMail, 
+            agtFoucons, 
+            agtFoucr, 
+            agtFouval, 
+            agtAnnee, 
+            utlOuverture, 
+            utlFermeture
+        ); 
+    }; 
+    name = VAgentFournisseur; 
+    primaryKeyAttributes = (agtAnnee, agtOrdre); 
+}

@@ -1,0 +1,80 @@
+{
+    contratsPourType = {
+        class = EOFetchSpecification; 
+        entityName = AccordsContrat; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = conNature; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = typeId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = conSuppr; 
+                    selectorName = isNotEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = conDateCloture; 
+                            selectorName = isEqualTo; 
+                            value = {class = EONull; }; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = conDateCloture; 
+                            selectorName = isGreaterThan; 
+                            value = {"_key" = now; class = EOQualifierVariable; }; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+    }; 
+    rechercherConvention = {
+        class = EOFetchSpecification; 
+        entityName = AccordsContrat; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "avenants.avtObjet"; 
+                            selectorName = isCaseInsensitiveLike; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "avenants.avtObjetCourt"; 
+                            selectorName = isCaseInsensitiveLike; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }
+                    ); 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = conSuppr; 
+                    selectorName = isEqualTo; 
+                    value = N; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {class = EOSortOrdering; key = exeOrdre; selectorName = "compareDescending:"; }
+        ); 
+        usesDistinct = YES; 
+    }; 
+}

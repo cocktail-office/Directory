@@ -1,0 +1,9 @@
+Label : WOString { value = fieldLabel; }
+
+Input : WOGenericContainer {
+	elementName = "input";
+	name = inputName;
+	type = "text";
+	onKeyPress = "checkEnter(event);";
+}
+

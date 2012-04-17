@@ -1,0 +1,242 @@
+{
+    attributes = (
+        {
+            columnName = "CON_CR"; 
+            externalType = VARCHAR2; 
+            name = conCr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_DATE_APUREMENT"; 
+            externalType = DATE; 
+            name = conDateApurement; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_DATE_CLOTURE"; 
+            externalType = DATE; 
+            name = conDateCloture; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_DATE_CREATION"; 
+            externalType = DATE; 
+            name = conDateCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_DATE_MODIF"; 
+            externalType = DATE; 
+            name = conDateModif; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_DATE_VALID_ADM"; 
+            externalType = DATE; 
+            name = conDateValidAdm; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_ETABLISSEMENT"; 
+            externalType = VARCHAR2; 
+            name = conEtablissement; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_GROUPE_BUD"; 
+            externalType = VARCHAR2; 
+            name = conGroupeBud; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "CON_INDEX"; 
+            externalType = NUMBER; 
+            name = conIndex; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_NATURE"; 
+            externalType = NUMBER; 
+            name = conNature; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "CON_OBJET"; 
+            externalType = VARCHAR2; 
+            name = conObjet; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 250; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_OBJET_COURT"; 
+            externalType = VARCHAR2; 
+            name = conObjetCourt; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_OBSERVATIONS"; 
+            externalType = VARCHAR2; 
+            name = conObservations; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            columnName = "CON_ORDRE"; 
+            externalType = NUMBER; 
+            name = conOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_REFERENCE_EXTERNE"; 
+            externalType = VARCHAR2; 
+            name = conReferenceExterne; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CON_SUPPR"; 
+            externalType = VARCHAR2; 
+            name = conSuppr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "EXE_ORDRE"; 
+            externalType = NUMBER; 
+            name = exeOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TR_ORDRE"; 
+            externalType = NUMBER; 
+            name = trOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "UTL_ORDRE_CREATION"; 
+            externalType = NUMBER; 
+            name = utlOrdreCreation; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_ORDRE_MODIF"; 
+            externalType = NUMBER; 
+            name = utlOrdreModif; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_ORDRE_VALID_ADM"; 
+            externalType = NUMBER; 
+            name = utlOrdreValidAdm; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        conOrdre, 
+        exeOrdre, 
+        conIndex, 
+        conEtablissement, 
+        conCr, 
+        conNature, 
+        conReferenceExterne, 
+        conObjet, 
+        conObjetCourt, 
+        conObservations, 
+        trOrdre, 
+        utlOrdreCreation, 
+        conDateCreation, 
+        utlOrdreModif, 
+        conDateModif, 
+        utlOrdreValidAdm, 
+        conDateValidAdm, 
+        conDateCloture, 
+        conDateApurement, 
+        conGroupeBud, 
+        conSuppr
+    ); 
+    className = "org.cocktail.directory.eof.server.EOAccordsContrat"; 
+    classProperties = (
+        exeOrdre, 
+        conIndex, 
+        conEtablissement, 
+        conCr, 
+        conNature, 
+        conReferenceExterne, 
+        conObjet, 
+        conObjetCourt, 
+        conObservations, 
+        trOrdre, 
+        utlOrdreCreation, 
+        conDateCreation, 
+        utlOrdreModif, 
+        conDateModif, 
+        utlOrdreValidAdm, 
+        conDateValidAdm, 
+        conDateCloture, 
+        conDateApurement, 
+        conGroupeBud, 
+        conSuppr, 
+        avenants, 
+        conOrdre, 
+        centreGestion
+    ); 
+    externalName = "ACCORDS.CONTRAT"; 
+    name = AccordsContrat; 
+    primaryKeyAttributes = (conOrdre); 
+    relationships = (
+        {
+            destination = AccordsAvenant; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = conOrdre; sourceAttribute = conOrdre; }); 
+            name = avenants; 
+        }, 
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = conCr; }); 
+            name = centreGestion; 
+        }
+    ); 
+}

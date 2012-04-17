@@ -1,0 +1,370 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "AVT_CR_GEST"; 
+            externalType = NUMBER; 
+            name = avtCrGest; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_CREATION"; 
+            externalType = DATE; 
+            name = avtDateCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_DEB"; 
+            externalType = DATE; 
+            name = avtDateDeb; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_DEB_EXEC"; 
+            externalType = DATE; 
+            name = avtDateDebExec; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_FIN"; 
+            externalType = DATE; 
+            name = avtDateFin; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_FIN_EXEC"; 
+            externalType = DATE; 
+            name = avtDateFinExec; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_MODIF"; 
+            externalType = DATE; 
+            name = avtDateModif; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_SIGNATURE"; 
+            externalType = DATE; 
+            name = avtDateSignature; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DATE_VALID_ADM"; 
+            externalType = DATE; 
+            name = avtDateValidAdm; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_DEP_ANTERIEURE"; 
+            externalType = NUMBER; 
+            name = avtDepAnterieure; 
+            precision = 12; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "AVT_INDEX"; 
+            externalType = NUMBER; 
+            name = avtIndex; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_LUCRATIVITE"; 
+            externalType = VARCHAR2; 
+            name = avtLucrativite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_MNT_RELIQUAT"; 
+            externalType = NUMBER; 
+            name = avtMntReliquat; 
+            precision = 12; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_MODE_GEST"; 
+            externalType = NUMBER; 
+            name = avtModeGest; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_MONNAIE"; 
+            externalType = VARCHAR2; 
+            name = avtMonnaie; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_MONTANT_HT"; 
+            externalType = NUMBER; 
+            name = avtMontantHt; 
+            precision = 12; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_MONTANT_TTC"; 
+            externalType = NUMBER; 
+            name = avtMontantTtc; 
+            precision = 12; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "AVT_OBJET"; 
+            externalType = VARCHAR2; 
+            name = avtObjet; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 250; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_OBJET_COURT"; 
+            externalType = VARCHAR2; 
+            name = avtObjetCourt; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_OBSERVATIONS"; 
+            externalType = VARCHAR2; 
+            name = avtObservations; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            columnName = "AVT_ORDRE"; 
+            externalType = NUMBER; 
+            name = avtOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_PCT_AVANCE"; 
+            externalType = NUMBER; 
+            name = avtPctAvance; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_REC_ANTERIEURE"; 
+            externalType = NUMBER; 
+            name = avtRecAnterieure; 
+            precision = 12; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_RECUP_TVA"; 
+            externalType = VARCHAR2; 
+            name = avtRecupTva; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_REF_EXTERNE"; 
+            externalType = VARCHAR2; 
+            name = avtRefExterne; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_STAT_RELIQUAT"; 
+            externalType = NUMBER; 
+            name = avtStatReliquat; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AVT_SUPPR"; 
+            externalType = VARCHAR2; 
+            name = avtSuppr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "CON_ORDRE"; 
+            externalType = NUMBER; 
+            name = conOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DISC_ORDRE"; 
+            externalType = NUMBER; 
+            name = discOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TA_ORDRE"; 
+            externalType = NUMBER; 
+            name = taOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_ORDRE_CREATION"; 
+            externalType = NUMBER; 
+            name = utlOrdreCreation; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_ORDRE_MODIF"; 
+            externalType = NUMBER; 
+            name = utlOrdreModif; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "UTL_ORDRE_VALID_ADM"; 
+            externalType = NUMBER; 
+            name = utlOrdreValidAdm; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        avtOrdre, 
+        conOrdre, 
+        avtIndex, 
+        avtRefExterne, 
+        avtCrGest, 
+        taOrdre, 
+        avtModeGest, 
+        avtMontantTtc, 
+        avtObjet, 
+        avtObjetCourt, 
+        avtObservations, 
+        avtDateDeb, 
+        avtDateFin, 
+        avtDateDebExec, 
+        avtDateFinExec, 
+        avtDateSignature, 
+        utlOrdreCreation, 
+        avtDateCreation, 
+        utlOrdreModif, 
+        avtDateModif, 
+        utlOrdreValidAdm, 
+        avtDateValidAdm, 
+        avtPctAvance, 
+        avtRecAnterieure, 
+        avtDepAnterieure, 
+        avtMonnaie, 
+        avtLucrativite, 
+        avtMontantHt, 
+        avtRecupTva, 
+        avtMntReliquat, 
+        avtStatReliquat, 
+        discOrdre, 
+        avtSuppr
+    ); 
+    className = "org.cocktail.directory.eof.server.EOAccordsAvenant"; 
+    classProperties = (
+        conOrdre, 
+        avtIndex, 
+        avtRefExterne, 
+        avtCrGest, 
+        taOrdre, 
+        avtModeGest, 
+        avtMontantTtc, 
+        avtObjet, 
+        avtObjetCourt, 
+        avtObservations, 
+        avtDateDeb, 
+        avtDateFin, 
+        avtDateDebExec, 
+        avtDateFinExec, 
+        avtDateSignature, 
+        utlOrdreCreation, 
+        avtDateCreation, 
+        utlOrdreModif, 
+        avtDateModif, 
+        utlOrdreValidAdm, 
+        avtDateValidAdm, 
+        avtPctAvance, 
+        avtRecAnterieure, 
+        avtDepAnterieure, 
+        avtMonnaie, 
+        avtLucrativite, 
+        avtMontantHt, 
+        avtRecupTva, 
+        avtMntReliquat, 
+        avtStatReliquat, 
+        discOrdre, 
+        avtSuppr, 
+        avtOrdre, 
+        partenaires
+    ); 
+    externalName = "ACCORDS.AVENANT"; 
+    fetchSpecificationDictionary = {}; 
+    name = AccordsAvenant; 
+    primaryKeyAttributes = (avtOrdre); 
+    relationships = (
+        {
+            destination = AccordsAvenantPartenaire; 
+            internalInfo = {"_nameInObjectStore" = accordsAvenantPartenaires; }; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = avtOrdre; sourceAttribute = avtOrdre; }); 
+            name = partenaires; 
+        }
+    ); 
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wodefinitions>
+        <wo class="DirectoryListing.java" wocomponentcontent="false">
+
+        <binding name="mainId"/>
+		<binding name="mainClass"/>
+		<binding name="specificClass"/>
+		
+		
+		</wo>
+</wodefinitions>

@@ -1,0 +1,70 @@
+{
+    attributes = (
+        {
+            columnName = "C_TYPE_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cTypeStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_DEB_VAL"; 
+            externalType = DATE; 
+            name = dDebVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_FIN_VAL"; 
+            externalType = DATE; 
+            name = dFinVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "L_TYPE_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = lTypeStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (cTypeStructure, lTypeStructure, dDebVal, dFinVal, dCreation, dModification); 
+    className = "org.cocktail.directory.eof.server.EOTypeStructure"; 
+    classProperties = (lTypeStructure, dDebVal, dFinVal, dCreation, dModification, structureUlrs); 
+    externalName = "TYPE_STRUCTURE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (lTypeStructure, dDebVal, dFinVal, dCreation, dModification, structureUlrs); 
+    }; 
+    name = TypeStructure; 
+    primaryKeyAttributes = (cTypeStructure); 
+    relationships = (
+        {
+            destination = StructureUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cTypeStructure; sourceAttribute = cTypeStructure; }); 
+            name = structureUlrs; 
+        }
+    ); 
+}

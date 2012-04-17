@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang = "en" lang = "fr">
+  <head>
+    <meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8" />
+    <meta name = "ROBOTS" content = "NOINDEX, NOFOLLOW" />
+    <title>Annuaire</title>
+  </head>
+  <body>
+    <div id = "overDiv"></div>
+    <webobject name = "PageContainer">
+      <webobject name = "IsNotStandAlone">
+        <div class = "header">
+          <div style = "float:left;">
+            <webobject name = "HLWebSite"><webobject name = "Logo" /></webobject>
+          </div>
+          <div id = "apptitle"><webobject name = "AppTitle" /></div>
+          <div id = "dirtitle"><webobject name = "DirTitle" /></div>
+        </div>
+        <webobject name = "FormChangeLang">
+          <div class = "toolbar">
+            <webobject name = "IsHelpAvailable">
+              <span class = "helplink"><webobject name = "LinkHelp" /></span>
+            </webobject>
+            <span class = "changelang"><webobject name = "PopUpLangues" /></span>
+            <webobject name = "IsMailReaction">
+              <span class = "mailreaction"> <webobject name = "LnkMailReaction" /> </span>
+            </webobject>
+            <span class = "divlogin"><webobject name = "LinkConnect" /></span>
+          </div>
+        </webobject>
+        <webobject name = "HeaderContainer">
+          <webobject name = "ShouldDispSearch">
+            <webobject name = "FormSearch">
+              <div id = "simplesearch">
+                <span class = "label"><webobject name = "LSimpleSearch" /></span>
+                <webobject name = "ListSearchFields"> <webobject name = "ASearchField" /> </webobject>
+                <webobject name = "IsError">
+                  <br />
+                  <div class = "errorarea"> <webobject name = "MessageError" /> </div>
+                </webobject>
+              </div>
+            </webobject>
+          </webobject>
+          <webobject name = "NavBar" />
+        </webobject>
+      </webobject>
+      <br />
+      <webobject name = "IsShowInstruct">
+        <div id = "instruct"><webobject name = "TSearchInstruct" /></div>
+      </webobject>
+      <webobject name = "BoolDirectoryListing"> <webobject name = "CompDirectoryListing" /> </webobject>
+      <webobject name = "BoolDirectoryBrowser">
+        <webobject name = "IsError">
+          <div class = "errorarea"> <webobject name = "MessageError" /> </div>
+        </webobject>
+        <webobject name = "CompDirectoryBrowser" />
+      </webobject>
+      <webobject name = "BoolDetailDisplay">
+        <div id = "browser" class = "browser">
+          <br />
+          <webobject name = "IsError">
+            <div class = "errorarea"> <webobject name = "MessageError" /> </div>
+          </webobject>
+          <webobject name = "DetailComponent" />
+          <br />
+        </div>
+      </webobject>
+      <webobject name = "BoolSimpleSearchResults">
+        <webobject name = "IsError">
+          <div class = "errorarea"> <webobject name = "MessageError" /> </div>
+        </webobject>
+        <webobject name = "CompSimpleSearchResults" />
+      </webobject>
+      <br />
+    </webobject>
+    <webobject name = "IsNotStandAlone">
+      <div id = "footer">
+        <span id = "fleft">&copy; <webobject name = "EtabName" /></span>
+        <span id = "fright"><webobject name = "EtabUrl" /></span>
+      </div>
+    </webobject>
+  </body>
+  <script type = "text/javascript">
+    brDiv = document.getElementById("browser");
+    if(brDiv!=null)
+    	Rico.Corner.round(brDiv, {blend:true, border: '#374562'});
+  </script>
+</html>

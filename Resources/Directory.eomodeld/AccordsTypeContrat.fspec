@@ -1,0 +1,14 @@
+{
+    fetchRootRecord = {
+        class = EOFetchSpecification; 
+        entityName = AccordsTypeContrat; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOKeyValueQualifier; 
+            key = tyconIdPere; 
+            selectorName = isEqualTo; 
+            value = {class = EONull; }; 
+        }; 
+    }; 
+}

@@ -1,0 +1,311 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "ADR_ADRESSE1"; 
+            externalType = VARCHAR2; 
+            name = adrAdresse1; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_ADRESSE2"; 
+            externalType = VARCHAR2; 
+            name = adrAdresse2; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_BP"; 
+            externalType = VARCHAR2; 
+            name = adrBp; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 7; 
+        }, 
+        {
+            columnName = "ADR_LISTE_ROUGE"; 
+            externalType = VARCHAR2; 
+            name = adrListeRouge; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "ADR_ORDRE"; 
+            externalType = NUMBER; 
+            name = adrOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_URL_PERE"; 
+            externalType = VARCHAR2; 
+            name = adrUrlPere; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_URL_RELATIVE"; 
+            externalType = VARCHAR2; 
+            name = adrUrlRelative; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_URL_TEMPLATE"; 
+            externalType = VARCHAR2; 
+            name = adrUrlTemplate; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "BIS_TER"; 
+            externalType = VARCHAR2; 
+            name = bisTer; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_IMPLANTATION"; 
+            externalType = VARCHAR2; 
+            name = cImplantation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = "C_PAYS"; 
+            externalType = VARCHAR2; 
+            name = cPays; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_VOIE"; 
+            externalType = VARCHAR2; 
+            name = cVoie; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CODE_POSTAL"; 
+            externalType = VARCHAR2; 
+            name = codePostal; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CP_ETRANGER"; 
+            externalType = VARCHAR2; 
+            name = cpEtranger; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_DEB_VAL"; 
+            externalType = DATE; 
+            name = dDebVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_FIN_VAL"; 
+            externalType = DATE; 
+            name = dFinVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HABITANT_CHEZ"; 
+            externalType = VARCHAR2; 
+            name = habitantChez; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 32; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = LOCALITE; 
+            externalType = VARCHAR2; 
+            name = localite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NO_VOIE"; 
+            externalType = VARCHAR2; 
+            name = noVoie; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 4; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NOM_VOIE"; 
+            externalType = VARCHAR2; 
+            name = nomVoie; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 22; 
+        }, 
+        {
+            columnName = "TEM_PAYE_UTIL"; 
+            externalType = VARCHAR2; 
+            name = temPayeUtil; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = VILLE; 
+            externalType = VARCHAR2; 
+            name = ville; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        adrOrdre, 
+        habitantChez, 
+        noVoie, 
+        bisTer, 
+        cVoie, 
+        nomVoie, 
+        localite, 
+        codePostal, 
+        ville, 
+        cPays, 
+        cpEtranger, 
+        cImplantation, 
+        dDebVal, 
+        dFinVal, 
+        adrAdresse1, 
+        adrAdresse2, 
+        adrBp, 
+        adrUrlPere, 
+        adrUrlRelative, 
+        adrUrlTemplate, 
+        adrListeRouge, 
+        dCreation, 
+        dModification, 
+        temPayeUtil
+    ); 
+    className = "org.cocktail.directory.eof.server.EOAdresse"; 
+    classProperties = (
+        habitantChez, 
+        noVoie, 
+        bisTer, 
+        cVoie, 
+        nomVoie, 
+        localite, 
+        codePostal, 
+        ville, 
+        cPays, 
+        cpEtranger, 
+        cImplantation, 
+        dDebVal, 
+        dFinVal, 
+        adrAdresse1, 
+        adrAdresse2, 
+        adrBp, 
+        adrUrlPere, 
+        adrUrlRelative, 
+        adrUrlTemplate, 
+        adrListeRouge, 
+        dCreation, 
+        dModification, 
+        temPayeUtil, 
+        repartPersonneAdresse, 
+        pays
+    ); 
+    externalName = ADRESSE; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            habitantChez, 
+            noVoie, 
+            bisTer, 
+            cVoie, 
+            nomVoie, 
+            localite, 
+            codePostal, 
+            ville, 
+            cPays, 
+            cpEtranger, 
+            cImplantation, 
+            dDebVal, 
+            dFinVal, 
+            adrAdresse1, 
+            adrAdresse2, 
+            adrBp, 
+            adrUrlPere, 
+            adrUrlRelative, 
+            adrUrlTemplate, 
+            adrListeRouge, 
+            dCreation, 
+            dModification, 
+            temPayeUtil, 
+            repartPersonneAdresse, 
+            pays
+        ); 
+    }; 
+    name = Adresse; 
+    primaryKeyAttributes = (adrOrdre); 
+    relationships = (
+        {
+            destination = Pays; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cPays; sourceAttribute = cPays; }); 
+            name = pays; 
+        }, 
+        {
+            destination = RepartPersonneAdresse; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = adrOrdre; sourceAttribute = adrOrdre; }); 
+            name = repartPersonneAdresse; 
+        }
+    ); 
+}

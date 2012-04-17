@@ -1,0 +1,60 @@
+ItemIdentification : WOString { value = getItemIdentification; }
+LExercice : WOString { 
+	value = session.localizedStrings.LExercice; //VALID 
+}
+ValExercice : WOString { value = item.exeOrdre.intValue; }
+LManagementCenter : WOString { value = session.localizedStrings.LManagementCenter; //VALID 
+ }
+ValManagementCenter : WOString { value = item.centreGestion.displayString; }
+LObservations : WOString { value = session.localizedStrings.LObservations; //VALID 
+ }
+ValObservations : WOString { value = item.conObservations; }
+LAvenants : WOString { value = session.localizedStrings.LAvenants; //VALID 
+ }
+
+LPartPrinc : WOString { value = session.localizedStrings.LPartPrinc; //VALID 
+ }
+ValPartPrinc : WOString { value = item.libPartenairePrincipal; }
+
+
+LoopAvenants : WORepetition {
+	list = item.sortedByIndexAvenants;
+	item = aAvenant;
+}
+AvenantObjet : WOString { value = aAvenant.avtObjet; }
+LDebFinExecution : WOString { value = session.localizedStrings.LDebFinExecution; //VALID 
+ }
+ValDebFinExecution : WOString { value = aAvenant.debFinExecution; //VALID 
+ }
+
+HasPartMoraux : WOConditional { condition = aAvenant.hasPartenairesMoraux; }
+HasPartPhysiques : WOConditional { condition = aAvenant.hasPartenairesPhysiques; }
+
+
+
+LPartenairesPhys : WOString { value = session.localizedStrings.LPartenairesPhys; //VALID 
+ }
+LPartenairesMoraux : WOString { value = session.localizedStrings.LPartenairesMoraux; //VALID 
+ }
+
+TablePartenairesMor : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = directory;
+	listObjects = listPartenairesMorAvenant;
+	fields = getFieldPartMor;
+	useHyperLink = false;
+	typeRequestItem = typeRequestItem;
+}
+
+TablePartenairesPhys : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = directory;
+	listObjects = listPartenairesPhysAvenant;
+	fields = getFieldPartPhys;
+	useHyperLink = false;
+	typeRequestItem = typeRequestItem;
+}

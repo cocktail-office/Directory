@@ -1,0 +1,68 @@
+GlobalContainer : WOGenericContainer {
+	elementName = "div";
+	class = ^mainClass;
+	id = ^mainId;
+}
+
+LoopDirectories : WORepetition {
+	list = directories;
+	item = currentDirectory;
+}
+
+Directory : WOGenericContainer {
+	elementName = "div";
+	class = ^specificClass;
+	id = currentDirectory.cssIdOfDirectory;
+}
+
+UseHyperLink : WOConditional {	condition = useSpecificDirectory; }
+UseNoHyperLink : WOConditional {	condition = useSpecificDirectory; negate = true; }
+
+DirectoryTitle : WOString { value = getLocalizationOfDirectoryTitle; }
+
+IsExternalDir : WOConditional { condition = isExternalDirectory; }
+IsRegularDir : WOConditional { condition = isExternalDirectory; negate = true; }
+
+DirectoryURL : WOHyperlink {
+	directActionName = "discover";
+	queryDictionary = queryParameters;
+	string = getLocalizationOfDirectoryTitle;
+	class = currentDirectory.specificClass;
+}
+
+SpanListOneDirectory : WOGenericContainer {
+	elementName = "div";
+	class = currentDirectory.specificClass;
+}
+
+ExtDirectoryURL : WOHyperlink {
+	href =  externalDirectoryUrl;
+	string = getLocalizationOfDirectoryTitle;
+	class = "directorytitle";
+}
+
+DirectorySubTitle : WOString {
+	value = getLocalizedDirSubTitle;
+	escapeHTML = false;
+}
+
+LoopPaths : WORepetition {
+	list = currentDirectory.pathways;
+	item = currentPathway;
+}
+
+BoolHasPathways : WOConditional {
+	condition = currentDirectory.pathways;
+}
+
+PathwayContainer : WOGenericContainer {
+	elementName = "div";
+	class = cSS_CLASS_REF_divPathForFilters;
+}
+
+SpecificPathURL : WOHyperlink {
+	string = getPathwayLocalizedTitle;
+	directActionName = "discover";
+	queryDictionary = queryParameters;
+	class = currentPathway.specificClass;
+}

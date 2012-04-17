@@ -1,0 +1,122 @@
+TableChildren : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = directory;
+	pathway = pathway;
+	listObjects = displayGroup.displayedObjects;
+	fields = getSummaryFieldsForMembers;
+	useHyperLink = shouldLinkToDetails;
+	typeRequestItem = typeRequestItem;
+}
+
+ObjectsNavBar : CktlNavigationBar {
+	displayGroup = displayGroup;
+	shortPageList = false;
+	textMode = false;
+	longListLimit = 15;
+}
+
+AlphaFilter : AlphabeticDataFilter {
+	displayGroup = displayGroup;
+	qualifiedField = pathway.fieldForSortingSummaryItems;
+}
+
+//pathway.methodNameForLabel
+
+BoolHasFieldsForLevel : WOConditional {
+	condition = hasFieldsForLevel;
+}
+
+ListFieldForLevel: WORepetition {
+	item = currentFieldLevel;
+	list = getFieldsForLevel;
+}
+
+FieldLevelLabel : WOString {
+	value = fieldLevelLabel;
+}
+
+BoolHasSubFields : WOConditional {
+	condition = currentFieldLevel.hasSubFields;
+}
+
+ListSubFields: WORepetition {
+	item = currentSubField;
+	list = currentFieldLevel.getSubFields;
+}
+
+SubFieldLabel : WOString {
+	value = subFieldLabel;
+}
+
+BoolIsSubFieldAList : WOConditional {
+	condition = currentSubField.isList;
+}
+
+IsSubFieldMailto : WOConditional { condition = isSubFieldAMailTo; }
+
+ValMailSubField : MailtoLink {
+	mail = currentSubFieldSimpleValue;
+	mailLabel = currentSubFieldSimpleValue;
+	showMailIcon = true;
+}
+
+BoolIsSubFieldSimpleString : WOConditional {
+	condition = isSubFieldSimpleString;
+}
+
+
+
+ValueSubFieldAsList: WORepetition {
+	item = currentSubFieldValue;
+	list = currentSubFieldValueAsList;
+}
+
+ElementValue : WOString {
+	value = currentSubFieldValue;
+}
+
+
+SimpleSubFieldValue : WOString {
+	value = currentSubFieldSimpleValue;
+}
+
+CurrentFieldLevelValue : WOString {
+	value = currentFieldLevelValue;
+	escapeHTML = currentFieldLevel.escapeHTML;
+	
+}
+
+// Div retractable
+ContentBox : WOGenericContainer {
+	elementName = "div";
+	class = "headingfile";
+	id = "itemdesc_id";
+	style = collapsableDivInitialStyle;
+} 
+
+CollapserALink : WOGenericContainer {
+	elementName = "a";
+	onclick = onClickString;
+	id = "bdesc_id";
+	class = collapserALinkInitStyle;
+}
+
+CollapserALinkTitle : WOString { value = session.localizedStrings.LInfos; //VALID
+ }
+// fin div retractable
+
+BoolFieldTitle : WOConditional {
+	condition = currentFieldLevel.isTitle;
+}
+
+BoolFieldNoTitle : WOConditional {
+	condition = currentFieldLevel.isTitle;
+	negate = true;
+}
+
+LabelMembers : WOString {
+	value = session.localizedStrings.LMembers; //VALID
+}
+

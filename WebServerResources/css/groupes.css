@@ -1,0 +1,25 @@
+/**
+ * groupes.css
+ * Gere l'apparence de l'annuaire structures
+ */
+ 
+.directories #groupe {
+	background: url(img/dir_groupe.png) no-repeat left;
+}
+/*
+.directories div#groupe {
+	float: right;
+}
+*/
+
+/*******************
+ * SearchResults
+ ***/
+div.searchresults div#groupe tr.s {
+	background-color: #FFD4AA;
+}
+div.searchresults div#groupe h2 {
+	color: #FF7F00;
+	border-bottom: 2px solid #FF7F00;
+}
+/* fin SearchResults */

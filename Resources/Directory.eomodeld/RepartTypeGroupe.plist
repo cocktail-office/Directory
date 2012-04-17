@@ -1,0 +1,43 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "TGRP_CODE"; 
+            externalType = VARCHAR2; 
+            name = tgrpCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }
+    ); 
+    attributesUsedForLocking = (cStructure, tgrpCode); 
+    className = "org.cocktail.directory.eof.server.EORepartTypeGroupe"; 
+    classProperties = (structureUlr, typeGroupe, tgrpCode); 
+    externalName = "REPART_TYPE_GROUPE"; 
+    fetchSpecificationDictionary = {}; 
+    name = RepartTypeGroupe; 
+    primaryKeyAttributes = (tgrpCode, cStructure); 
+    relationships = (
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = structureUlr; 
+        }, 
+        {
+            destination = TypeGroupe; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = tgrpCode; sourceAttribute = tgrpCode; }); 
+            name = typeGroupe; 
+        }
+    ); 
+}

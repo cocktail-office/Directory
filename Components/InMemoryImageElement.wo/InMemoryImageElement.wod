@@ -1,0 +1,7 @@
+ImageElement : WOGenericElement {
+	elementName = "IMG";
+	invokeAction = deliverImage;
+	src = contentDeliveryURL;
+	width = ^width;
+}
+

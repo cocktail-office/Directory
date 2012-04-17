@@ -1,0 +1,65 @@
+LnkOpenClose: WOHyperlink {
+	action = selectNode;
+	fragmentIdentifier = anchor;
+	name = anchor;
+}
+
+DLnkDetailNode : WOHyperlink {
+	directActionName = "discover";
+	queryDictionary = queryDictionary;
+	string = currentRecord.displayString;
+	class = getDLinkDetailCls;
+	onmouseover = tooltipDetail;
+}
+
+
+
+ImgOpenClosed: WOImage {
+	filename = icon;
+	framework = "app";
+	border = "0px";
+	height = "10px";
+	width = "10px";
+	onmouseover = tooltipExpand;
+}
+
+FontSelection: WOGenericContainer {
+	color = nodeSelectedTextColor;
+	elementName = "font";
+}
+
+ValueNode: WOString {
+	value = valueNode;
+	escapeHTML = false;
+}
+
+BoolShowSons : WOConditional {
+	condition = isViewSons;
+}
+
+ImgDot : WOImage {
+	filename = "pix.gif";
+	framework = "app";
+	border = "0px";
+	height = "16px";
+	width = "16px";
+}
+
+LoopSons : WORepetition {
+	list = sons;
+	item = eog;
+}
+
+InnerDTreeView : DTreeView {
+	directory = directory;
+	pathway = pathway;
+	typeRequestItem = typeRequestItem;
+
+	currentRecord = eog;
+	libelKey = libelKey;
+	sonsKey = sonsKey;
+	selectionKey = selectionKey;
+	selectionTextColor = selectionTextColor;
+	level = nextLevel;
+	openLevel = openLevel;
+}

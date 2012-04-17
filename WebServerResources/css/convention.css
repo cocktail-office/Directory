@@ -1,0 +1,14 @@
+.directories #convention {
+	background: url(img/dir_convention.png) no-repeat left;
+}
+
+/*******************
+ * SearchResults
+ ***/
+div.searchresults div#convention tr.s {
+	background-color: #D4FFAA;
+}
+div.searchresults div#convention h2 {
+	color: #89DF07;
+	border-bottom: 2px solid #89DF07;
+}

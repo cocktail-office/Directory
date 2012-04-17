@@ -1,0 +1,49 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, cStructure); 
+    className = "org.cocktail.directory.eof.server.EORepartStructure"; 
+    classProperties = (structureUlr, repartTypesGroupe, individuUlr); 
+    externalName = "REPART_STRUCTURE"; 
+    fetchSpecificationDictionary = {}; 
+    name = RepartStructure; 
+    primaryKeyAttributes = (persId, cStructure); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = individuUlr; 
+        }, 
+        {
+            destination = RepartTypeGroupe; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = repartTypesGroupe; 
+        }, 
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = structureUlr; 
+        }
+    ); 
+}

@@ -1,0 +1,36 @@
+{
+    attributes = (
+        {
+            columnName = "TGRP_CODE"; 
+            externalType = VARCHAR2; 
+            name = tgrpCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TGRP_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = tgrpLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TGRP_TEM_WEB"; 
+            externalType = VARCHAR; 
+            name = tgrpTemWeb; 
+            valueClassName = NSString; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (tgrpCode, tgrpLibelle, tgrpTemWeb); 
+    className = "org.cocktail.directory.eof.server.EOTypeGroupe"; 
+    classProperties = (tgrpLibelle, tgrpCode, tgrpTemWeb); 
+    externalName = "TYPE_GROUPE"; 
+    fetchSpecificationDictionary = {}; 
+    name = TypeGroupe; 
+    primaryKeyAttributes = (tgrpCode); 
+}

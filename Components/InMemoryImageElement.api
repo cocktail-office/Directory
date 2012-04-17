@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wodefinitions>
+	<wo class="InMemoryContentElement" wocomponentcontent="false">
+
+		<binding name="data"/>
+		<binding name="mimeType"/>
+
+		<validation message="&apos;data&apos; is a required binding">
+			<unbound name="data"/>
+		</validation>
+
+		<validation message="&apos;MIMEType&apos; is a required binding">
+			<unbound name="mimeType"/>
+		</validation>
+	</wo>
+</wodefinitions>

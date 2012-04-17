@@ -1,0 +1,100 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "AP_MONTANT"; 
+            externalType = NUMBER; 
+            name = apMontant; 
+            precision = 20; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "AP_ORDRE"; 
+            externalType = NUMBER; 
+            name = apOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "AP_PRINCIPAL"; 
+            externalType = VARCHAR2; 
+            name = apPrincipal; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "AVT_ORDRE"; 
+            externalType = NUMBER; 
+            name = avtOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TYPE_PART_ORDRE"; 
+            externalType = NUMBER; 
+            name = typePartOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (apOrdre, avtOrdre, persId, cStructure, apMontant, apPrincipal, typePartOrdre); 
+    className = "org.cocktail.directory.eof.server.EOAccordsAvenantPartenaire"; 
+    classProperties = (
+        avtOrdre, 
+        persId, 
+        cStructure, 
+        apMontant, 
+        apPrincipal, 
+        typePartOrdre, 
+        avenant, 
+        structureUlr, 
+        individuUlr, 
+        apOrdre
+    ); 
+    externalName = "ACCORDS.AVENANT_PARTENAIRE"; 
+    name = AccordsAvenantPartenaire; 
+    primaryKeyAttributes = (apOrdre); 
+    relationships = (
+        {
+            destination = AccordsAvenant; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = avtOrdre; sourceAttribute = avtOrdre; }); 
+            name = avenant; 
+        }, 
+        {
+            destination = IndividuUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = individuUlr; 
+        }, 
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = structureUlr; 
+        }
+    ); 
+}

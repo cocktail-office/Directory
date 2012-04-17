@@ -1,0 +1,30 @@
+<project name="CRIWebAppToCktlWebApp" default="migrate" basedir=".">
+	<target name="migrate" depends="01_migrate,02_migrate,03_migrate,04_migrate" />
+	
+	<target name="01_migrate">
+		<replace dir="." replacefilterfile="01_CRIWebAppToCktlWebApp.properties">
+		  <include name="**/*.java"/>
+		</replace>
+	</target>
+
+	<target name="02_migrate">
+		<replace dir="." replacefilterfile="02_CRIWebAppToCktlWebApp.properties">
+		  <include name="**/*.java"/>
+		</replace>
+	</target>
+
+	<target name="03_migrate">
+		<replace dir="." replacefilterfile="03_CRIWebAppToCktlWebApp.properties">
+		  <include name="**/*.java"/>
+		</replace>
+	</target>
+
+	<target name="04_migrate">
+		<replace dir="." replacefilterfile="04_CRIWebAppToCktlWebApp.properties">
+		  <include name="**/*.java"/>
+		  <include name="**/*.wod"/>
+		  <include name="**/*.html"/>
+		</replace>
+	</target>
+		
+</project>

@@ -1,0 +1,20 @@
+IsDisplaySomething : WOConditional {
+	condition = canDisplaySomething;
+}
+
+ImgMail : WOImage {
+	filename = "css/img/email.png";
+	framework = "app";
+	border = "0";
+	width = "16px";
+	height = "16px";
+}
+
+ShowMailIcon : WOConditional {
+	condition = isShowMailIcon;
+}
+
+StrMail : WOString {
+	escapeHTML = false;
+	value = mailToScript;
+}

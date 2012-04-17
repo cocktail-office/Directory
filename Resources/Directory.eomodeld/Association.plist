@@ -1,0 +1,53 @@
+{
+    attributes = (
+        {
+            columnName = "ASS_ID"; 
+            externalType = NUMBER; 
+            name = assId; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "ASS_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = assLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }
+    ); 
+    attributesUsedForLocking = (assId, assLibelle, dCreation, dModification); 
+    className = "org.cocktail.directory.eof.server.EOAssociation"; 
+    classProperties = (assLibelle, dCreation, dModification, repartAssociations); 
+    externalName = ASSOCIATION; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (assLibelle, dCreation, dModification, repartAssociations); 
+    }; 
+    name = Association; 
+    primaryKeyAttributes = (assId); 
+    relationships = (
+        {
+            destination = RepartAssociation; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = assId; sourceAttribute = assId; }); 
+            name = repartAssociations; 
+        }
+    ); 
+}

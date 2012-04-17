@@ -1,0 +1,83 @@
+{
+    attributes = (
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PERS_LC"; 
+            externalType = VARCHAR2; 
+            name = persLc; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            columnName = "PERS_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = persLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PERS_NOMPTR"; 
+            externalType = VARCHAR2; 
+            name = persNomptr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            columnName = "PERS_ORDRE"; 
+            externalType = NUMBER; 
+            name = persOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "PERS_TYPE"; 
+            externalType = VARCHAR2; 
+            name = persType; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, persType, persOrdre, persLibelle, persLc, persNomptr); 
+    className = "org.cocktail.directory.eof.server.EOPersonne"; 
+    classProperties = (
+        persType, 
+        persOrdre, 
+        persLibelle, 
+        persLc, 
+        persNomptr, 
+        individuUlrs, 
+        structureUlrs
+    ); 
+    externalName = PERSONNE; 
+    fetchSpecificationDictionary = {}; 
+    name = Personne; 
+    primaryKeyAttributes = (persId); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = individuUlrs; 
+        }, 
+        {
+            destination = StructureUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = structureUlrs; 
+        }
+    ); 
+}

@@ -1,0 +1,477 @@
+{
+    attributes = (
+        {
+            columnName = "C_CIVILITE"; 
+            externalType = VARCHAR2; 
+            name = cCivilite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_DEPT_NAISSANCE"; 
+            externalType = VARCHAR2; 
+            name = cDeptNaissance; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_PAYS_NAISSANCE"; 
+            externalType = VARCHAR2; 
+            name = cPaysNaissance; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_PAYS_NATIONALITE"; 
+            externalType = VARCHAR2; 
+            name = cPaysNationalite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            definition = "supannCategorie.catLibelle2"; 
+            externalType = VARCHAR2; 
+            name = catLibelle2; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CATEGORIE_PRINC"; 
+            externalType = NUMBER; 
+            name = categoriePrinc; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_ACTIVITE"; 
+            externalType = VARCHAR2; 
+            name = indActivite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_AGENDA"; 
+            externalType = VARCHAR2; 
+            name = indAgenda; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_C_SIT_MILITAIRE"; 
+            externalType = VARCHAR2; 
+            name = indCSitMilitaire; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_C_SITUATION_FAMILLE"; 
+            externalType = VARCHAR2; 
+            name = indCSituationFamille; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_CLE_INSEE"; 
+            externalType = NUMBER; 
+            name = indCleInsee; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_NO_INSEE"; 
+            externalType = VARCHAR2; 
+            name = indNoInsee; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 13; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_ORIGINE"; 
+            externalType = VARCHAR2; 
+            name = indOrigine; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_PHOTO"; 
+            externalType = VARCHAR2; 
+            name = indPhoto; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IND_QUALITE"; 
+            externalType = VARCHAR2; 
+            name = indQualite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LANGUE_PREF"; 
+            externalType = VARCHAR2; 
+            name = languePref; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            columnName = "LISTE_ROUGE"; 
+            externalType = CHAR; 
+            name = listeRouge; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NO_INDIVIDU_CREATEUR"; 
+            externalType = NUMBER; 
+            name = noIndividuCreateur; 
+            precision = 8; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NOM_AFFICHAGE"; 
+            externalType = VARCHAR2; 
+            name = nomAffichage; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NOM_PATRONYMIQUE"; 
+            externalType = VARCHAR2; 
+            name = nomPatronymique; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            columnName = "NOM_USUEL"; 
+            externalType = VARCHAR2; 
+            name = nomUsuel; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ORGA_CODE"; 
+            externalType = VARCHAR2; 
+            name = orgaCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ORGA_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = orgaLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = PRENOM; 
+            externalType = VARCHAR2; 
+            name = prenom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = PRENOM2; 
+            externalType = VARCHAR2; 
+            name = prenom2; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PRENOM_AFFICHAGE"; 
+            externalType = VARCHAR2; 
+            name = prenomAffichage; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            columnName = "TEM_SS_DIPLOME"; 
+            externalType = VARCHAR2; 
+            name = temSsDiplome; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "TEM_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = temValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "VILLE_DE_NAISSANCE"; 
+            externalType = VARCHAR2; 
+            name = villeDeNaissance; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        noIndividu, 
+        persId, 
+        nomPatronymique, 
+        prenom, 
+        cCivilite, 
+        nomUsuel, 
+        prenom2, 
+        villeDeNaissance, 
+        cDeptNaissance, 
+        cPaysNaissance, 
+        cPaysNationalite, 
+        indCSitMilitaire, 
+        indCSituationFamille, 
+        indNoInsee, 
+        indCleInsee, 
+        indQualite, 
+        indPhoto, 
+        indActivite, 
+        indOrigine, 
+        temSsDiplome, 
+        temValide, 
+        indAgenda, 
+        languePref, 
+        listeRouge, 
+        categoriePrinc, 
+        noIndividuCreateur, 
+        orgaCode, 
+        orgaLibelle, 
+        nomAffichage, 
+        prenomAffichage, 
+        catLibelle2
+    ); 
+    className = "org.cocktail.directory.eof.server.EOIndividuUlr"; 
+    classProperties = (
+        persId, 
+        nomPatronymique, 
+        prenom, 
+        cCivilite, 
+        nomUsuel, 
+        prenom2, 
+        villeDeNaissance, 
+        cDeptNaissance, 
+        cPaysNaissance, 
+        cPaysNationalite, 
+        indCSitMilitaire, 
+        indCSituationFamille, 
+        indNoInsee, 
+        indCleInsee, 
+        indQualite, 
+        indPhoto, 
+        indActivite, 
+        indOrigine, 
+        temSsDiplome, 
+        temValide, 
+        indAgenda, 
+        languePref, 
+        listeRouge, 
+        categoriePrinc, 
+        orgaCode, 
+        orgaLibelle, 
+        nomAffichage, 
+        prenomAffichage, 
+        repartStructures, 
+        noIndividu, 
+        repartComptes, 
+        etudiants, 
+        repartEmploi, 
+        supannCategorie, 
+        personneTelephones, 
+        catLibelle2, 
+        repartAssociations, 
+        repartPersonneAdresses, 
+        vPersonnelActuel, 
+        vLdapPersonnelActuel, 
+        toComptes
+    ); 
+    externalName = "INDIVIDU_ULR"; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            persId, 
+            nomPatronymique, 
+            prenom, 
+            cCivilite, 
+            nomUsuel, 
+            prenom2, 
+            villeDeNaissance, 
+            cDeptNaissance, 
+            cPaysNaissance, 
+            cPaysNationalite, 
+            indCSitMilitaire, 
+            indCSituationFamille, 
+            indNoInsee, 
+            indCleInsee, 
+            indQualite, 
+            indPhoto, 
+            indActivite, 
+            indOrigine, 
+            temSsDiplome, 
+            temValide, 
+            indAgenda, 
+            languePref, 
+            listeRouge, 
+            categoriePrinc, 
+            orgaCode, 
+            orgaLibelle, 
+            nomAffichage, 
+            prenomAffichage, 
+            repartStructures, 
+            noIndividu, 
+            repartComptes, 
+            etudiants, 
+            repartEmploi, 
+            supannCategorie, 
+            personneTelephones, 
+            catLibelle2, 
+            repartAssociations
+        ); 
+    }; 
+    isReadOnly = Y; 
+    name = IndividuUlr; 
+    primaryKeyAttributes = (noIndividu); 
+    relationships = (
+        {
+            destination = Etudiant; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividu; }); 
+            name = etudiants; 
+            numberOfToManyFaultsToBatchFetch = 1; 
+        }, 
+        {
+            destination = PersonneTelephone; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = personneTelephones; 
+            numberOfToManyFaultsToBatchFetch = 0; 
+        }, 
+        {
+            destination = RepartAssociation; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = repartAssociations; 
+        }, 
+        {
+            destination = RepartCompte; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = repartComptes; 
+            numberOfToManyFaultsToBatchFetch = 1; 
+        }, 
+        {
+            destination = RepartEmploi; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividu; }); 
+            name = repartEmploi; 
+        }, 
+        {
+            destination = RepartPersonneAdresse; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = repartPersonneAdresses; 
+        }, 
+        {
+            destination = RepartStructure; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = repartStructures; 
+            numberOfToManyFaultsToBatchFetch = 3; 
+        }, 
+        {
+            destination = SupannCategorie; 
+            isToMany = N; 
+            joinSemantic = EOLeftOuterJoin; 
+            joins = ({destinationAttribute = catNumero; sourceAttribute = categoriePrinc; }); 
+            name = supannCategorie; 
+        }, 
+        {
+            destination = Compte; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = toComptes; 
+        }, 
+        {
+            destination = VLdapPersonnelActuel; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividu; }); 
+            name = vLdapPersonnelActuel; 
+        }, 
+        {
+            destination = VPersonnelActuel; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noDossierPers; sourceAttribute = noIndividu; }); 
+            name = vPersonnelActuel; 
+        }
+    ); 
+}

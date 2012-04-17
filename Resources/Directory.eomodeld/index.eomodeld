@@ -1,0 +1,259 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {
+        driver = ""; 
+        jdbc2Info = {
+            "ANSI92_CONFORMANCE" = ANSI92EntryLevel; 
+            "DBMS_NAME" = Oracle; 
+            "DRIVER_NAME" = "Oracle JDBC driver"; 
+            "DRIVER_VER" = "9.0.1.0.0"; 
+            "IDENTIFIER_QUOTE_STRING" = "\""; 
+            "NON_NULLABLE_COLUMNS" = T; 
+            "STRING_FUNCTIONS" = "CHR, INITCAP, LOWER, LPAD, LTRIM, NLS,_INITCAP, NLS,_LOWER, NLS,_UPPER, REPLACE, RPAD, RTRIM, SOUNDEX, SUBSTR, SUBSTRB, TRANSLATE, UPPER, ASCII, INSTR, INSTRB, LENGTH, LENGTHB, NLSSORT, CHARTOROWID, CONVERT, HEXTORAW, RAWTOHEX, ROWIDTOCHAR, TO_CHAR, TO_DATE, TO_LABEL, TO_MULTI_BYTE, TO_NUMBER, TO_SINGLE_BYTE"; 
+            typeInfo = {
+                BLOB = {
+                    createParams = 0; 
+                    defaultJDBCType = (BLOB); 
+                    isNullable = T; 
+                    isSearchable = F; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2147483647; 
+                }; 
+                CHAR = {
+                    createParams = 1; 
+                    defaultJDBCType = (CHAR); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2000; 
+                }; 
+                CLOB = {
+                    createParams = 0; 
+                    defaultJDBCType = (CLOB); 
+                    isNullable = T; 
+                    isSearchable = F; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2147483647; 
+                }; 
+                DATE = {
+                    createParams = 0; 
+                    defaultJDBCType = (TIMESTAMP); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 7; 
+                }; 
+                FLOAT = {
+                    createParams = 0; 
+                    defaultJDBCType = (FLOAT); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 127; 
+                    minScale = "-84"; 
+                    precision = 63; 
+                }; 
+                LONG = {
+                    createParams = 0; 
+                    defaultJDBCType = ("LONG VARCHAR"); 
+                    isNullable = T; 
+                    isSearchable = F; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2147483647; 
+                }; 
+                "LONG RAW" = {
+                    createParams = 0; 
+                    defaultJDBCType = ("LONG VARBINARY"); 
+                    isNullable = T; 
+                    isSearchable = F; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2147483647; 
+                }; 
+                NUMBER = {
+                    createParams = 2; 
+                    defaultJDBCType = (BIT, TINYINT, BIGINT, NUMERIC, INTEGER, SMALLINT); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 127; 
+                    minScale = "-84"; 
+                    precision = 38; 
+                }; 
+                RAW = {
+                    createParams = 1; 
+                    defaultJDBCType = (VARBINARY); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2000; 
+                }; 
+                REAL = {
+                    createParams = 0; 
+                    defaultJDBCType = (REAL); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 127; 
+                    minScale = "-84"; 
+                    precision = 63; 
+                }; 
+                VARCHAR2 = {
+                    createParams = 1; 
+                    defaultJDBCType = (VARCHAR); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 4000; 
+                }; 
+            }; 
+        }; 
+        plugin = ""; 
+    }; 
+    entities = (
+        {
+            className = "org.cocktail.directory.eof.server.EOAccordsAvenant"; 
+            name = AccordsAvenant; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOAccordsAvenantPartenaire"; 
+            name = AccordsAvenantPartenaire; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOAccordsContrat"; 
+            name = AccordsContrat; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOAccordsTypeContrat"; 
+            name = AccordsTypeContrat; 
+        }, 
+        {className = "org.cocktail.directory.eof.server.EOAdresse"; name = Adresse; }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOAssociation"; 
+            name = Association; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOCodeMarche"; 
+            name = CodeMarche; 
+        }, 
+        {className = "org.cocktail.directory.eof.server.EOCompte"; name = Compte; }, 
+        {className = "org.cocktail.directory.eof.server.EOEtudiant"; name = Etudiant; }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOGrhumParametres"; 
+            name = GrhumParametres; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOIndividuUlr"; 
+            name = IndividuUlr; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOListeForums"; 
+            name = ListeForums; 
+        }, 
+        {className = "org.cocktail.directory.eof.server.EOLocal"; name = Local; }, 
+        {className = "org.cocktail.directory.eof.server.EOLot"; name = Lot; }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOLotNomenclature"; 
+            name = LotNomenclature; 
+        }, 
+        {className = "org.cocktail.directory.eof.server.EOMarche"; name = Marche; }, 
+        {className = "org.cocktail.directory.eof.server.EOPays"; name = Pays; }, 
+        {className = "org.cocktail.directory.eof.server.EOPersonne"; name = Personne; }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOPersonneAlias"; 
+            name = PersonneAlias; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOPersonneTelephone"; 
+            name = PersonneTelephone; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOPhotosEmployesGrhum"; 
+            name = PhotosEmployesGrhum; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOPhotosEtudiantsGrhum"; 
+            name = PhotosEtudiantsGrhum; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartAssociation"; 
+            name = RepartAssociation; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartBureau"; 
+            name = RepartBureau; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartCompte"; 
+            name = RepartCompte; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartEmploi"; 
+            name = RepartEmploi; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartPersonneAdresse"; 
+            name = RepartPersonneAdresse; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartStructure"; 
+            name = RepartStructure; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORepartTypeGroupe"; 
+            name = RepartTypeGroupe; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EORibfourUlr"; 
+            name = RibfourUlr; 
+        }, 
+        {className = "org.cocktail.directory.eof.server.EOSalles"; name = Salles; }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOStructureUlr"; 
+            name = StructureUlr; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOSupannCategorie"; 
+            name = SupannCategorie; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOTypeGroupe"; 
+            name = TypeGroupe; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOTypeStructure"; 
+            name = TypeStructure; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOVAgentFournisseur"; 
+            name = VAgentFournisseur; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOVDroitsAnnuaireWeb"; 
+            name = VDroitsAnnuaireWeb; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOVFournisGrhum"; 
+            name = VFournisGrhum; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.VLdapPersonnelActuel"; 
+            name = VLdapPersonnelActuel; 
+        }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOVPersonnelActuel"; 
+            name = VPersonnelActuel; 
+        }, 
+        {className = "org.cocktail.directory.eof.server.EOVlans"; name = Vlans; }, 
+        {
+            className = "org.cocktail.directory.eof.server.EOCompteEmail"; 
+            name = CompteEmail; 
+        }
+    ); 
+    userInfo = {modelId = GRHUM; }; 
+}

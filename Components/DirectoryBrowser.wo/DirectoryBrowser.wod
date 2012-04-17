@@ -1,0 +1,94 @@
+BoolDisplayList : WOConditional { condition = shouldDisplayList; }
+BoolDisplayTable : WOConditional { condition = shouldDisplayTable; }
+BoolDisplayTree : WOConditional { condition = shouldDisplayTree; }
+
+MultiTreeView : MultRootTreeView {
+	directory = directory;
+	pathway = pathway;
+	typeRequestItem = typeRequestItem;
+	listRootRecords = listRootRecords;
+	libelKey = pathway.methodNameForLabel;
+	sonsKey = pathway.methodNameGivingSons;
+	selectionKey = "selectedNode";
+	selectionTextColor = "#AF270A";
+	openLevel = pathway.nbNodesToExpand;
+}
+
+TreeView : DTreeView {
+	directory = directory;
+	pathway = pathway;
+	typeRequestItem = typeRequestItem;
+	currentRecord = ^rootRecord;
+	libelKey = pathway.methodNameForLabel;
+	sonsKey = pathway.methodNameGivingSons;
+	selectionKey = "selectedNode";
+	selectionTextColor = "#AF270A";
+	openLevel = pathway.nbNodesToExpand;
+}
+
+
+
+BoolDisplayForParentItem: WOConditional {
+	condition = shouldDisplayForParentItem;
+}
+
+BoolDisplayParentItems: WOConditional {
+	condition = shouldDisplayForDirStart;
+}
+
+
+DisplayString: WOString {
+	value = currentItem.displayString;
+}
+
+ItemURL: WOHyperlink {
+	directActionName = "discover";
+	queryDictionary = queryParameters;
+	string = currentItem.displayString;
+}
+
+CompSummaryItemsDisplay: SummaryItemsDisplay {
+	directory = ^directory;
+	pathway = ^pathway;
+	displayGroup = displayGroup;
+	parentObject = parentObject;
+	alternSummaryFieldsForMembers = alternSummaryFieldsForMembers;
+	level = level;
+	typeRequestItem = typeRequestItem;
+	
+}
+
+ItemsRepetition: WORepetition {
+	item = currentItem;
+	list = displayGroup.allObjects;
+}
+
+ItemsTable : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = directory;
+	listObjects = displayGroup.displayedObjects;
+	fields = getSummaryFields;
+	useHyperLink = directory.areDetailsAvailable;
+	typeRequestItem = typeRequestItem;
+	pathway = ^pathway;
+}
+
+AlphaFilter : AlphabeticDataFilter {
+	displayGroup = displayGroup;
+	qualifiedField = pathway.methodNameForLabel;
+}
+
+ItemsNavBar : CktlNavigationBar {
+	displayGroup = displayGroup;
+	shortPageList = false;
+	textMode = false;
+	longListLimit = 10;
+}
+
+ItemIdentification : WOString {	value = parentObject.displayString; }
+
+FormNavObjects: WOForm {
+	name="navobjform";
+}

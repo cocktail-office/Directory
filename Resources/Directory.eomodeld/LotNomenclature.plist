@@ -1,0 +1,25 @@
+{
+    attributes = (
+        {
+            columnName = "CM_ORDRE"; 
+            externalType = NUMBER; 
+            name = cmOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "LOT_ORDRE"; 
+            externalType = NUMBER; 
+            name = lotOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (cmOrdre, lotOrdre); 
+    className = "org.cocktail.directory.eof.server.EOLotNomenclature"; 
+    externalName = "JEFY_MARCHES.LOT_NOMENCLATURE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_nameInObjectStore" = "LOT_NOMENCLATURE"; }; 
+    name = LotNomenclature; 
+    primaryKeyAttributes = (lotOrdre, cmOrdre); 
+}

@@ -1,0 +1,160 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "LOT_CATALOGUE"; 
+            externalType = VARCHAR2; 
+            name = lotCatalogue; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_COTITULAIRES"; 
+            externalType = VARCHAR2; 
+            name = lotCotitulaires; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 512; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_DEBUT"; 
+            externalType = DATE; 
+            name = lotDebut; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_FIN"; 
+            externalType = DATE; 
+            name = lotFin; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_HT"; 
+            externalType = NUMBER; 
+            name = lotHt; 
+            precision = 12; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_INDEX"; 
+            externalType = VARCHAR2; 
+            name = lotIndex; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = lotLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 512; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_MONNAIE"; 
+            externalType = VARCHAR2; 
+            name = lotMonnaie; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "LOT_ORDRE"; 
+            externalType = NUMBER; 
+            name = lotOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_SOUSTRAITANTS"; 
+            externalType = VARCHAR2; 
+            name = lotSoustraitants; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 512; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_SUPPR"; 
+            externalType = VARCHAR2; 
+            name = lotSuppr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LOT_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = lotValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "MAR_ORDRE"; 
+            externalType = NUMBER; 
+            name = marOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        lotCatalogue, 
+        lotDebut, 
+        lotFin, 
+        lotHt, 
+        lotIndex, 
+        lotLibelle, 
+        lotMonnaie, 
+        lotOrdre, 
+        lotSuppr, 
+        lotValide, 
+        marOrdre, 
+        lotSoustraitants, 
+        lotCotitulaires
+    ); 
+    className = "org.cocktail.directory.eof.server.EOLot"; 
+    classProperties = (
+        lotCatalogue, 
+        lotDebut, 
+        lotFin, 
+        lotHt, 
+        lotIndex, 
+        lotLibelle, 
+        lotMonnaie, 
+        lotSuppr, 
+        lotValide, 
+        lotSoustraitants, 
+        lotCotitulaires, 
+        marche
+    ); 
+    externalName = "JEFY_MARCHES.LOT"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_nameInObjectStore" = LOT; }; 
+    name = Lot; 
+    primaryKeyAttributes = (lotOrdre); 
+    relationships = (
+        {
+            destination = Marche; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = marOrdre; sourceAttribute = marOrdre; }); 
+            name = marche; 
+        }
+    ); 
+}

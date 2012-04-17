@@ -1,0 +1,92 @@
+ItemIdentification : WOString { value = getItemIdentification; }
+LAdress : WOString { value = session.localizedStrings.LAdress; //VALID
+ }
+LFouContacts : WOString { value = session.localizedStrings.LFouContacts; //VALID
+ }
+LSiret : WOString { value = session.localizedStrings.LSiret; //VALID
+ }
+LTel : WOString { value = session.localizedStrings.LTel; //VALID
+ }
+LFax : WOString { value = session.localizedStrings.LFax; //VALID
+ }
+LRIB : WOString { value = session.localizedStrings.LRIB; //VALID
+ }  
+LAdrInternet : WOString { value = session.localizedStrings.LAdrInternet; //VALID
+ }
+
+LCBanque : WOString { value = session.localizedStrings.LCBanque; //VALID
+ }  
+LCGuichet : WOString { value = session.localizedStrings.LCGuichet; //VALID
+ }  
+LNoCompte : WOString { value = session.localizedStrings.LNoCompte; //VALID
+ }  
+LCleRib : WOString { value = session.localizedStrings.LCleRib; //VALID
+ }  
+LBIC : WOString { value = session.localizedStrings.LBIC; //VALID
+ }  
+LIBAN : WOString { value = session.localizedStrings.LIBAN; //VALID
+ }  
+LRibTitulaire : WOString { value = session.localizedStrings.LRibTitulaire; //VALID
+ }  
+LModePaie : WOString { value = session.localizedStrings.LModePaie; //VALID
+ }
+
+
+ValueSiret : WOString { value = item.siret; }
+ValueFax : WOString { value = item.faxFournis; }
+
+ElemURL : WOHyperlink {
+	href = currentAdresseWeb;
+	string = session.localizedStrings.LVisitWebSite; //VALID
+	class = "hyperlink";
+	target = "blank";
+}
+
+LinesURL : WORepetition {
+	list = item.adresseWeb;
+	item = currentAdresseWeb;
+}
+
+LinesTel : WORepetition {
+	list = item.telephoneFournis;
+	item = currentTelFournis;
+}
+
+ElemTel : WOString {	value = currentTelFournis; }
+
+LinesFax : WORepetition {
+	list = item.faxFournis;
+	item = currentFaxFournis;
+}
+
+ElemFax : WOString {	value = currentFaxFournis; }
+
+LoopRibs : WORepetition {
+	list = item.getRibs;
+	item = currentRib;
+}
+
+RibBanque : WOString { value = currentRib.cBanque; }
+RibGuichet : WOString { value = currentRib.cGuichet; }
+RibCompte : WOString { value = currentRib.noCompte; }
+RibCle : WOString { value = currentRib.cleRib; }
+RibBIC : WOString { value = currentRib.bic; }
+RibIban : WOString { value = currentRib.iban; }
+RibTitulaire : WOString { value = currentRib.ribTitco; }
+RibModeCode : WOString { value = currentRib.modCode; }
+
+LinesAdress : WORepetition {
+	list = item.adresseFournis;
+	item = currentLineAdress;
+}
+
+ElemAdress : WOString {	value = currentLineAdress; }
+
+TableContacts : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	listObjects = getContactsForSupplier;
+	fields = fieldsForContact;
+	useHyperLink = false;
+}

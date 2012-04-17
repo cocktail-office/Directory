@@ -1,0 +1,35 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = DATAS_PHOTO; 
+            externalType = "LONG RAW"; 
+            name = datasPhoto; 
+            valueClassName = NSData; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = DATE_PRISE; 
+            externalType = DATE; 
+            name = datePrise; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = NO_INDIVIDU; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            precision = 8; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (noIndividu, datePrise); 
+    className = EOGenericRecord; 
+    classProperties = (datasPhoto, datePrise); 
+    externalName = PHOTOS_ETUDIANTS_IUT_GRHUM; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (datasPhoto, datePrise); }; 
+    name = PPhotosEtudiantsIutGrhum; 
+    primaryKeyAttributes = (noIndividu); 
+}

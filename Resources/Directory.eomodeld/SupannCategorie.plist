@@ -1,0 +1,45 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "CAT_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = catLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CAT_LIBELLE2"; 
+            externalType = VARCHAR2; 
+            name = catLibelle2; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CAT_LISTE_ROUGE"; 
+            externalType = CHAR; 
+            name = catListeRouge; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            columnName = "CAT_NUMERO"; 
+            externalType = NUMBER; 
+            name = catNumero; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (catNumero, catLibelle, catLibelle2, catListeRouge); 
+    className = "org.cocktail.directory.eof.server.EOSupannCategorie"; 
+    classProperties = (catLibelle, catLibelle2, catListeRouge); 
+    externalName = "SUPANN_CATEGORIE"; 
+    fetchSpecificationDictionary = {}; 
+    name = SupannCategorie; 
+    primaryKeyAttributes = (catNumero); 
+}

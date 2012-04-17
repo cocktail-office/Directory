@@ -1,0 +1,162 @@
+{
+
+
+"AppTitle"="Université de Provence : Directories";
+"LHome"="Home";
+"LVisitSite"="Visit the website of the University";
+
+"LWriteUs"="Write to us !";
+
+"THelp"="Help";
+"THelpDesc"="Read this application's user manual !";
+
+"Subtitle"="The";
+
+"DEmployeesSubTitle"="<br/>";
+"DEmployeesTitle"="Staff";
+
+"DMarketsSubTitle"="<br/>";
+"DMarketsTitle"="Markets";
+
+"DStudentsSubTitle"="<br/>";
+"DStudentsTitle"="Students";
+
+"DSuppliersSubTitle"="<br/>";
+"DSuppliersTitle"="Suppliers";
+
+"DGroupsSubTitle"="<br/>";
+"DGroupsTitle"="Groups";
+
+"DConventionsSubTitle"="<br/>";
+"DConventionsTitle"="Conventions";
+
+"DResearchSubTitle"="<br/>";
+"DResearchTitle"="Research";
+
+"DEmployeesFunction"="function";
+"DEmployeesPathCategory"="categories";
+"DEmployeesPathDepartment"="services";
+"DEmployeesPathInstitutionalGroup"="institutional group";
+"DEmployeesName"="name";
+"DEmployeesForName"="first name";
+"DEmployeesQuality"="quality";
+"DEmployeesTelephone"="telephone";
+
+"PWDepartmentTitle"="by department";
+"PWCategoryTitle"="categories";
+"PWInstitutionalGrpsTitle"="institutional groups";
+
+"PWDiplomaTitle"="diploma";
+"PWElectedStudentsTitle"="student elected officials";
+
+"PWClientsTitle"="the clients";
+"PWSuppliersTitle"="the suppliers";
+"PWClientsAndSuppliersTitle"="the clients and suppliers";
+
+"PWMGroupTitle"="the mail groups";
+"PWMailingListTitle"="the mailing lists";
+"PWMTreeGroupTitle"="mail  groups (tree)";
+
+"PWCodeMarcheTitle"="by nomenclature code";
+
+"PWTypeContratTitle"="by contract type";
+
+"LDetailService"="Click her to display the details of this department";
+"LExpandService"="Click her to display the sub departments of this department";
+
+"LDetailDiploma"="Click her to display the students of this diploma";
+"LExpandDiploma"="Click her to display the diplomas of this kind";
+
+"LDetailConvention"="Click her to display the diplomas of this kind";
+"LExpandConvention"="Click her to display the sub kinds of conventions of this kind";
+
+"LDescConnect"="Only the links marked with a padlock require a connection";
+
+"LTitleProfil"="Aktivierung der E-Mail Adresse, ndern sie ihr Kennwort und andere informationen";
+
+
+"LLabel"="Heading";
+"LInfos"="Informations...";
+
+"LFouCode"="Code";
+"LFouContacts"="Supplier's correspondents";
+"LSiret"="Siret";
+
+"cCivilite"="Civility";
+"LNomUsuel"="Name";
+"LPrenom"="First name";
+"lcStructure"="Code";
+"LLibStructure"="Heading";
+"LCategory"="Category";
+
+"LTelephoneFax"="Telephon/Fax";
+"LEntity"="Department";
+"LTelFaxReception"="Tel. reception";
+"LTelFax"="Tel. direct"; 
+"LTel"="Telephone";
+"LFax"="Fax";
+"LMail"="Email";
+"LAdress"="Adress";
+"LAgenda"="Diary ";
+"LICal"="ICS";
+"LSee"="see";
+"LStream"="stream";
+"LLocalisation"="Bureau";
+"LQuality"="Quality";
+"LRole"="Role";
+
+"LContact"="Contact";
+"LDepartLabs"="Departments and labs";
+"LDispStudents"="Show students";
+"LStudentNumber"="Student number";
+
+"LFunctions"="Functions";
+"LGroupManager"="Person in charge";
+"LMembers"="Members";
+
+"LSimpleSearch"="search";
+
+"LMailAlias"="Alias";
+"LTypeGrp"="Type";
+
+"LPartenaires"="Partners";
+"LPartenairesMoraux"="Partners (legal entities)";
+"LPartenairesPhys"="Partners (individuals)";
+"LInfosContacts"="contacts infos";
+
+"LPartPrinc"="principal partner";
+"LExercice"="exercice";
+"LNumConvention"="number";
+"LRefExt"="external ref.";
+"LManagementCenter"="management center";
+"LObservations"="Observations";
+"LAvenant"="Endorsements";
+"LAvenants"="Avenants";
+"LDebFinExecution"="Beginning and end of execution";
+
+"TWebSite"="Web site";
+"TTHaveToLogin"="Please, log In in order to see these informations";
+"TLogin"="Log in";
+"TLogout"="Log out";
+
+"TSearchInstruct"="Select a directory to make a search";
+
+"TResultSearch"="Search results for";
+"TDetailed"="detailed";
+
+"TRevertedDir"="Reverted directory";
+
+"TReturnToMain"="Return to main page";
+"TError"="Error : This action caused an error :";
+"TUndefinedError"="An unexpected error has occured";
+"EXElementNotFound1"="The resource indentified by $RES is not found in the directory : $DIR with pathway : $PATH";
+"EXElementNotFound2"="The resource indentified by $RES is not found in the directory : $DIR";
+"EXElementNotFound3"="The resource indentified by $RES is not found";
+
+"TInsufficientPrivilegesDir"="You do not have the sufficient privileges to see these results !";
+"ErrMinCharsRecherche"="Your search is not enought precise, please type at least $NB characters in the search field !";
+"ErrTropDeResultats"="Votre recherche retourne trop de résulats. Veuillez préciser la recherche<br/> Seuls les %NB% premiers résultats sont affichés.";
+"ErrWaitBeforeSearch"="You have reached the max number of search allowed<br/>Please wait %NB% minutes before doing another other searchs in this directory.<br/><b>If you are member of our university please sign in to use this directory in an unlimited mode.</b>";
+
+
+}

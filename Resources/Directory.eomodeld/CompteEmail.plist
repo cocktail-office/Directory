@@ -1,0 +1,64 @@
+{
+    attributes = (
+        {
+            columnName = "CEM_ALIAS"; 
+            externalType = CHAR; 
+            name = cemAlias; 
+            valueClassName = NSString; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CEM_DOMAINE"; 
+            externalType = 40; 
+            name = cemDomaine; 
+            valueClassName = NSString; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CEM_EMAIL"; 
+            externalType = VARCHAR2; 
+            name = cemEmail; 
+            valueClassName = NSString; 
+            width = 60; 
+        }, 
+        {
+            columnName = "CEM_KEY"; 
+            externalType = NUMBER; 
+            name = cemKey; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CEM_PRIORITE"; 
+            externalType = NUMBER; 
+            name = cemPriorite; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "CPT_ORDRE"; 
+            externalType = NUMBER; 
+            name = cptOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (cemAlias, cemDomaine, cemEmail, cemKey, cemPriorite, cptOrdre); 
+    className = "org.cocktail.directory.eof.server.EOCompteEmail"; 
+    classProperties = (cemAlias, cemDomaine, cemEmail, cemPriorite, cptOrdre, toCompte); 
+    externalName = "COMPTE_EMAIL"; 
+    fetchSpecificationDictionary = {}; 
+    name = CompteEmail; 
+    primaryKeyAttributes = (cemKey); 
+    relationships = (
+        {
+            destination = Compte; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cptOrdre; sourceAttribute = cptOrdre; }); 
+            name = toCompte; 
+        }
+    ); 
+}

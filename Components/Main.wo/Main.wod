@@ -1,0 +1,158 @@
+IsNotStandAlone : WOConditional { condition = isStandalone; negate = true; }
+
+Logo : WOImage {
+	filename = "css/img/logo-univ.png";
+	framework = "app";
+	border = "0";
+	alt = "Logo Université";
+	
+}
+
+HLWebSite : WOHyperlink {
+	href = application.etabUrl;
+	title = session.localizedStrings.LVisitSite; //VALID 
+}
+
+
+PageContainer : AjaxUpdateContainer {
+	id = "page";
+}
+
+IsError : ERXNonNullConditional {
+	condition = errorMessage;
+}
+
+MessageError : WOString {
+	value = errorMessage;
+	escapeHTML = false;
+}
+
+
+AppTitle: WOString { value = session.appTitle; }
+DirTitle : WOString { value = directoryName; }
+
+LinkHelp : WOHyperlink {
+	href = application.getHelpLink;
+	string = session.localizedStrings.THelp; //VALID
+	title = session.localizedStrings.THelpDesc; //VALID
+	class = "helptitle";
+	target = "blank";
+}
+
+IsMailReaction : WOConditional { condition=isMailReaction; }
+
+LnkMailReaction : MailtoLink {
+	mail = application.mailReaction;
+	mailLabel = session.localizedStrings.LWriteUs; //VALID
+	showMailIcon = true;
+}
+
+LinkConnect : WOHyperlink {
+	action = connect;
+	string = linkConnectLabel;
+	class = getLinkConnectClass;
+	title = session.localizedStrings.LDescConnect; //VALID
+}
+
+IsShowInstruct: WOConditional {	condition = isShowInstruct; }
+
+BoolDetailDisplay : WOConditional {	condition = isShouldDisplayDetails; }
+BoolDirectoryBrowser: WOConditional { condition = isShouldDisplayDirectoryBrowser; }
+BoolDirectoryListing: WOConditional { condition = isShouldDisplayDirectoryListing; }
+BoolSimpleSearchResults: WOConditional { condition = isShouldDisplaySimpleSearchResults; }
+
+IsHelpAvailable : WOConditional { condition = application.isHelpAvailable; }
+
+TSearchInstruct : WOString { value = session.localizedStrings.TSearchInstruct; //VALID
+ }
+
+CompSimpleSearchResults : SimpleSearchResults {	dicoSearchParams = simpleSearchParams; }
+
+
+DetailComponent: WOSwitchComponent {
+	WOComponentName = getCompName;
+	detailItem = specificItem;
+	directory = directory;
+	pathway = pathway;
+}
+
+
+
+CompDirectoryBrowser: DirectoryBrowser {
+	directory = directory;
+	pathway = pathway;
+	level = level;
+	parentObject = parentObject;
+	listRootRecords = listRootRecords;
+	displayGroup = displayGroup;
+	alternSummaryFieldsForMembers = alternSummaryFieldsForMembers;
+	typeView	= typeViewForDirBrowser;
+	typeRequestItem = typeRequestItem;
+}
+
+
+
+CompDirectoryListing : DirectoryListing {
+	mainClass = "directories";
+	specificClass = "directory";
+	specificDirectory = directory;
+}
+
+
+
+ShouldDispSearch : WOConditional { condition = shouldDispSearch; }
+
+FormSearch: WOForm {
+	action = processSearch;
+//	directActionName = "search";
+//	queryDictionary = querySearchDico;
+	name = "formsearch";
+}
+
+FormChangeLang : ERXOptionalForm {
+	action = changeLocale;
+	name =  "formchangelang";
+}
+
+ObserveChangeLang : AjaxObserveField {
+	id = "observeChangelangId";
+	action = changeLocale;
+}
+
+PopUpLangues: WOPopUpButton {
+	item = currentLocale;
+	list = application.listLocales;
+	displayString = currentLocale.name;
+	value = currentLocale.value;
+	selection = session.navInfosHolder.selectedLocale;
+	name = "countries";
+	id = "countries";
+	class = "icon-menu";
+	onchange = "document.formchangelang.submit();";
+}
+
+HeaderContainer : WOGenericContainer {
+	elementName = "div";
+	/*class = "header";*/
+}
+
+LSimpleSearch : WOString { value = session.localizedStrings.LSimpleSearch; //VALID
+ } 
+
+NavBar: NavigationBar { }
+
+ListSearchFields : WORepetition {
+	list = directory.searchItems;
+	item = currentSearchItem;	
+}
+
+//IsNewLine : WOConditional { condition = currentSearchItem.isNewLine; }
+
+ASearchField : SearchField {
+	inputName = currentSearchItem.inputName;
+	localeId = currentSearchItem.localId;
+}
+
+EtabName : WOString { value = session.localizedStrings.EtabName; //VALID
+ }
+EtabUrl : WOString { value = application.etabHrefUrl; escapeHTML=false; }

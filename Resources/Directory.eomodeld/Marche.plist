@@ -1,0 +1,127 @@
+{
+    attributes = (
+        {
+            columnName = "EXE_ORDRE"; 
+            externalType = NUMBER; 
+            name = exeOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_CLAUSES"; 
+            externalType = VARCHAR2; 
+            name = marClauses; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 512; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_DEBUT"; 
+            externalType = DATE; 
+            name = marDebut; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_FIN"; 
+            externalType = DATE; 
+            name = marFin; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_INDEX"; 
+            externalType = VARCHAR2; 
+            name = marIndex; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 8; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = marLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 512; 
+        }, 
+        {
+            columnName = "MAR_ORDRE"; 
+            externalType = NUMBER; 
+            name = marOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_PASSATION"; 
+            externalType = VARCHAR2; 
+            name = marPassation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_SUPPR"; 
+            externalType = VARCHAR2; 
+            name = marSuppr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MAR_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = marValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        marSuppr, 
+        exeOrdre, 
+        marClauses, 
+        marDebut, 
+        marFin, 
+        marIndex, 
+        marLibelle, 
+        marOrdre, 
+        marPassation, 
+        marValide
+    ); 
+    className = "org.cocktail.directory.eof.server.EOMarche"; 
+    classProperties = (
+        marSuppr, 
+        exeOrdre, 
+        marClauses, 
+        marDebut, 
+        marFin, 
+        marIndex, 
+        marLibelle, 
+        marPassation, 
+        marValide, 
+        lots
+    ); 
+    externalName = "JEFY_MARCHES.MARCHE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_nameInObjectStore" = MARCHE; }; 
+    name = Marche; 
+    primaryKeyAttributes = (marOrdre); 
+    relationships = (
+        {
+            destination = Lot; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = marOrdre; sourceAttribute = marOrdre; }); 
+            name = lots; 
+        }
+    ); 
+}

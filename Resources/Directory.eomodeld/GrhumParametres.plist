@@ -1,0 +1,36 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "PARAM_KEY"; 
+            externalType = VARCHAR2; 
+            name = paramKey; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            columnName = "PARAM_ORDRE"; 
+            externalType = NUMBER; 
+            name = paramOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PARAM_VALUE"; 
+            externalType = VARCHAR2; 
+            name = paramValue; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 200; 
+        }
+    ); 
+    attributesUsedForLocking = (paramOrdre, paramKey, paramValue); 
+    className = "org.cocktail.directory.eof.server.EOGrhumParametres"; 
+    classProperties = (paramKey, paramValue); 
+    externalName = "GRHUM_PARAMETRES"; 
+    fetchSpecificationDictionary = {}; 
+    name = GrhumParametres; 
+    primaryKeyAttributes = (paramOrdre); 
+}

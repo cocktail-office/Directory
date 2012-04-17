@@ -1,0 +1,26 @@
+{
+    attributes = (
+        {
+            columnName = ALIAS; 
+            externalType = VARCHAR2; 
+            name = alias; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, alias); 
+    className = "org.cocktail.directory.eof.server.EOPersonneAlias"; 
+    classProperties = (alias); 
+    externalName = "PERSONNE_ALIAS"; 
+    fetchSpecificationDictionary = {}; 
+    name = PersonneAlias; 
+    primaryKeyAttributes = (persId, alias); 
+}

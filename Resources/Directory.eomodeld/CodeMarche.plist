@@ -1,0 +1,78 @@
+{
+    attributes = (
+        {
+            columnName = "CM_CODE"; 
+            externalType = VARCHAR2; 
+            name = cmCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CM_DETAIL"; 
+            externalType = VARCHAR2; 
+            name = cmDetail; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 255; 
+        }, 
+        {
+            columnName = "CM_LIB"; 
+            externalType = VARCHAR2; 
+            name = cmLib; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CM_LIB_COURT"; 
+            externalType = VARCHAR2; 
+            name = cmLibCourt; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 255; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CM_NIVEAU"; 
+            externalType = NUMBER; 
+            name = cmNiveau; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "CM_ORDRE"; 
+            externalType = NUMBER; 
+            name = cmOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CM_PERE"; 
+            externalType = NUMBER; 
+            name = cmPere; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CM_SUPPR"; 
+            externalType = VARCHAR2; 
+            name = cmSuppr; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (cmCode, cmDetail, cmLib, cmLibCourt, cmNiveau, cmOrdre, cmPere, cmSuppr); 
+    className = "org.cocktail.directory.eof.server.EOCodeMarche"; 
+    classProperties = (cmCode, cmDetail, cmLib, cmLibCourt, cmNiveau, cmPere, cmSuppr); 
+    externalName = "JEFY_MARCHES.CODE_MARCHE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_nameInObjectStore" = "CODE_MARCHE"; }; 
+    name = CodeMarche; 
+    primaryKeyAttributes = (cmOrdre); 
+}

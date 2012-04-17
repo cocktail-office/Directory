@@ -1,0 +1,25 @@
+{
+    bureauForPersonInStructure = {
+        class = EOFetchSpecification; 
+        entityName = Salles; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartBureaux.noIndividu"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = noIndividu; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartBureaux.cStructure"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = cStructure; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

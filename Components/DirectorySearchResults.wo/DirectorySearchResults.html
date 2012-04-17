@@ -1,0 +1,41 @@
+<div class="elem_result">
+<h3><webobject name="CollapserALink">
+	<webobject name="CollapserALinkTitle"></webobject>
+		<webobject name="IsNeedAuthentication">&nbsp;<webobject name="ImgLock"></webobject></webobject>
+</webobject></h3>
+</div>
+
+<webobject name = "IsError">
+<div class="errorarea centeredDiv"> <webobject name = "MessageError" /> </div>
+</webobject>
+
+<webobject name="CollapsableDiv">
+		<webobject name="BoolSearchAtDirLevel">
+			<webobject name="IsNeedAuthentication">
+				<webobject name="IsUserNotConnected">
+					<span class="splogin"><webobject name="TTHaveToLogin"></webobject>&nbsp;:&nbsp;<webobject name="LinkConnect"></webobject></span>
+				</webobject>
+				
+				<webobject name="IsUserConnected">
+					<webobject name="CanShowResults"><webobject name="ResultsTableDirectory"/></webobject>
+					<webobject name="CantShowResults">
+						<span class="splogin"><webobject name="TInsufficientPrivilegesDir"></webobject></span>
+					</webobject>
+				</webobject>
+			
+			</webobject>
+			
+			<webobject name="IsNeedNoAuthentication">
+				<webobject name="ResultsTableDirectory"></webobject>
+			</webobject>
+			<br/>
+		</webobject>
+		<br/>
+			
+		<webobject name="BoolSearchAtPathLevel">
+			<webobject name="LoopPathways">
+				<webobject name="PathResults"></webobject>
+				<br/>
+			</webobject>
+		</webobject>
+</webobject>

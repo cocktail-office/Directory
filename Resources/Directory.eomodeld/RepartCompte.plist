@@ -1,0 +1,35 @@
+{
+    attributes = (
+        {
+            columnName = "CPT_ORDRE"; 
+            externalType = NUMBER; 
+            name = cptOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (cptOrdre, persId); 
+    className = "org.cocktail.directory.eof.server.EORepartCompte"; 
+    classProperties = (compte); 
+    externalName = "REPART_COMPTE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (compte); }; 
+    name = RepartCompte; 
+    primaryKeyAttributes = (persId, cptOrdre); 
+    relationships = (
+        {
+            destination = Compte; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cptOrdre; sourceAttribute = cptOrdre; }); 
+            name = compte; 
+        }
+    ); 
+}

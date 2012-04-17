@@ -1,0 +1,140 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "C_STRUCTURE_PERE"; 
+            externalType = VARCHAR2; 
+            name = cStructurePere; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LIS_ACTIVE"; 
+            externalType = VARCHAR2; 
+            name = lisActive; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "LIS_CODE"; 
+            externalType = VARCHAR2; 
+            name = lisCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = "LIS_CODE_SUJET"; 
+            externalType = CHAR; 
+            name = lisCodeSujet; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LIS_DESCRIPTION"; 
+            externalType = VARCHAR2; 
+            name = lisDescription; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LIS_EMAIL"; 
+            externalType = VARCHAR2; 
+            name = lisEmail; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LIS_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = lisLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            columnName = "LIS_MODE_REPONSE"; 
+            externalType = CHAR; 
+            name = lisModeReponse; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LIS_PRIVEE"; 
+            externalType = CHAR; 
+            name = lisPrivee; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            columnName = "LIS_RENVOI_ORIGINAL"; 
+            externalType = CHAR; 
+            name = lisRenvoiOriginal; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LIS_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = lisValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        lisCode, 
+        lisLibelle, 
+        cStructure, 
+        cStructurePere, 
+        lisValide, 
+        lisEmail, 
+        lisDescription, 
+        lisActive, 
+        lisPrivee, 
+        lisModeReponse, 
+        lisRenvoiOriginal, 
+        lisCodeSujet
+    ); 
+    className = "org.cocktail.directory.eof.server.EOListeForums"; 
+    classProperties = (
+        lisLibelle, 
+        cStructure, 
+        cStructurePere, 
+        lisValide, 
+        lisEmail, 
+        lisDescription, 
+        lisActive, 
+        lisPrivee, 
+        lisModeReponse, 
+        lisRenvoiOriginal, 
+        lisCodeSujet
+    ); 
+    externalName = "FORUMS.LISTE_FORUMS"; 
+    fetchSpecificationDictionary = {}; 
+    name = ListeForums; 
+    primaryKeyAttributes = (lisCode); 
+}

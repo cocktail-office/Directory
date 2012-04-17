@@ -1,0 +1,31 @@
+{
+    attributes = (
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "NUM_HARPEGE"; 
+            externalType = NUMBER; 
+            name = numHarpege; 
+            precision = 8; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (numHarpege, noIndividu); 
+    className = "org.cocktail.directory.eof.server.VLdapPersonnelActuel"; 
+    classProperties = (numHarpege, noIndividu); 
+    externalName = "GRHUM.V_LDAP_PERSONNEL_ACTUEL"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (numHarpege, noIndividu); 
+        "_nameInObjectStore" = "V_LDAP_PERSONNEL_ACTUEL"; 
+    }; 
+    name = VLdapPersonnelActuel; 
+    primaryKeyAttributes = (noIndividu); 
+}

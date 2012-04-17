@@ -1,0 +1,25 @@
+{
+    partenairesForAvenant = {
+        class = EOFetchSpecification; 
+        entityName = AccordsAvenantPartenaire; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = avtOrdre; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = avtOrdre; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = apPrincipal; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }
+            ); 
+        }; 
+    }; 
+}

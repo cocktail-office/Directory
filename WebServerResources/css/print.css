@@ -1,0 +1,365 @@
+/************************************
+ * directory.css
+ * Gère la structure d'un répertoire
+ *
+ ************************************/
+@IMPORT url("personnel.css");
+@IMPORT url("groupes.css");
+@IMPORT url("recherche.css");
+@IMPORT url("etudiants.css");
+@IMPORT url("marches.css");
+ 
+html {
+	margin: 0;
+	padding: 0;
+} 
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: "Trebuchet MS", Verdana, "Lucida Grande", Tahoma, Helvetica, Sans-Serif;
+	font-size: 85%;
+	background-color: #fff;
+	color: #3a3a3a;
+}
+form, table {
+	font-size: .9em;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #278FCF;
+}
+a:hover {
+	text-decoration: underline;
+	color: #3a3a3a;
+}
+
+hr.spacer {
+	clear: both;
+	visibility: hidden;
+}
+
+#page {
+	margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/*******************
+ * Header
+ ***/
+.header {
+	background: url(header_background.png) repeat-x top left;
+	height: 260px;
+	padding: 4px 4px 0;
+}
+
+.header #apptitle {
+	background: url(app_title.png) no-repeat bottom left;
+	position: absolute;
+	left: 120px;
+	color: #fff;
+	font-weight: bold;
+	width: 300px;
+	height: 35px;
+}
+.header #apptitle span {
+	display: none;	
+}
+/* fin Header */
+
+/*******************
+ * LoginBox
+ ***/
+#loginbox {
+	display: none;
+}
+
+/* fin LoginBox */
+
+/*******************
+ * SimpleSearch
+ ***/
+form#ss {
+ 	position: absolute;
+ 	top: 230px;
+ 	right: 20px;
+ 	padding: 0;
+ 	font-size: .8em;
+}
+form#ss input {
+	font-size: .9em;	
+}
+form#ss a {
+	float: left;
+	color: #3a3a3a;
+}
+
+/* fin SimpleSearch */
+
+/*******************
+ * Localizer
+ ***/
+#languages {
+ 	position: absolute;
+ 	top: 43px;
+ 	right: 4px;
+ 	background: url(locale.png) no-repeat top left;
+ 	padding-left: 30px;
+}
+#languages span#languagetitle {
+	display: none;
+}
+#languages select {
+	font-size: 85%;
+}
+/* fin Localizer */
+
+/*******************
+ * Plugins
+ ***/
+.plugins {
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	font-size: .9em;
+}
+
+.plugins div#addressbook {
+	float: left;
+	background: url(Addressbook.png) no-repeat top left;
+	padding-left: 52px;
+}
+.plugins div#addressbook div {
+	border-bottom: 1px solid;
+	padding-right: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.plugins div#addressbook div a {
+	color: #3a3a3a;
+}
+.plugins div#addressbook div a:hover {
+	text-decoration: none;
+}
+.plugins div#addressbook div.opened {
+	background: url(triangle_up.gif) no-repeat bottom right;
+}
+.plugins div#addressbook div.closed {
+	background: url(triangle_down.gif) no-repeat bottom right;
+}
+.plugins dl#addressbooklist dd {
+	margin-left: 0;
+	padding-left: 24px;
+}
+.plugins dl#addressbooklist dd#addresserase {
+	background: url(ab_edit-delete.png) no-repeat top left;
+}
+.plugins dl#addressbooklist dd#addressexport {
+	background: url(ab_export.png) no-repeat top left;
+}
+.plugins dl#addressbooklist dd#addressview {
+	background: url(ab_view.png) no-repeat top left;
+}
+/* fin Plugins */
+
+/*******************
+ * Navigation
+ ***/
+ul#navigation {
+ 	position: absolute;
+ 	top: 225px;
+ 	padding: 0;
+ 	margin: 5px 0 0 50px;
+ 	clear: both;
+ 	list-style: none;
+ 	font-size: .9em;
+}
+
+ul#navigation li {
+	float: left;
+	min-height: 22px;
+}
+ul#navigation li a, ul#navigation li#index span#navindex {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+ul#navigation li a:hover {
+	border-bottom: 2px solid red;
+	text-decoration: none;
+}
+ul#navigation li#index a, ul#navigation li#index span#navindex {
+	background: url(home.png) no-repeat top left;
+	padding-left: 30px;
+}
+ul#navigation span.navigationsep {
+	margin: 0 5px;
+	color: red;
+}
+/* fin Navigation */
+
+/*******************
+ * DirectoryListing
+ ***/
+.directories {
+	width: 80%;
+	margin: 0 auto;
+}
+.directory {
+	float: left;
+	height: 9em;
+	width: 30%;
+	padding-left: 130px;
+	margin-bottom: 50px;
+}
+.directories a.directorytitle {
+	position: absolute;
+	margin-top: .6em;
+	font-size: 2.1em;
+}
+.directories span.directorysubtitle {
+	font-size: 1.3em;
+	margin-left: 1em;
+}
+.directories .filters {
+	margin-top: 30px;
+	padding-left: 10px;
+}
+.directories .filters a {
+	float: left;
+	clear: both;
+	padding-left: 30px;
+}
+.directories .filters a:hover {
+	background: url(fleche.png) no-repeat top left;
+}
+/* fin DirectoryListing */
+
+/*******************
+ * ListDisplay
+ ***/
+table#form_nav {
+	border: 0;
+	padding: 0;
+	width: 85%;
+	margin: 0 auto 20px;
+}
+table#form_nav a:hover{
+	color: #fff;
+}
+tr#form_nav_top {
+	height: 14px;
+	font-size: .5em;
+}
+#form_nav #form_nav_tl {
+	background: url(form_nav_tl.png) no-repeat top right;
+	width: 19px;
+}
+#form_nav #form_nav_t {
+	background: url(form_nav_t.png) repeat-x top left;
+}
+#form_nav #form_nav_tr {
+	background: url(form_nav_tr.png) no-repeat top left;
+	width: 20px;
+}
+#form_nav #form_nav_l {
+	background: url(form_nav_l.png) repeat-y top right;
+	width: 19px;
+}
+#form_nav #form_nav_m {
+	background-color: #494949;
+	width: 550px;
+	color: #fff;
+}
+#form_nav #form_nav_r {
+	background: url(form_nav_r.png) repeat-y top left;
+	width: 20px;
+}
+tr#form_nav_bottom {
+	height: 19px;
+	font-size: .5em;
+}
+#form_nav #form_nav_bl {
+	background: url(form_nav_bl.png) no-repeat top right;
+	width: 19px;
+}
+#form_nav #form_nav_b {
+	background: url(form_nav_b.png) repeat-x top left;
+}
+#form_nav #form_nav_br {
+	background: url(form_nav_br.png) no-repeat top left;
+	width: 20px;
+}
+/* fin ListDisplay */
+
+/*******************
+ * PagesNavigator
+ ***/
+table.pagesindex {
+	margin: auto;
+}
+table.pagesindex td {
+	text-align: center;
+}
+/* fin PagesNavigator */
+
+/*******************
+ * SearchResults
+ ***/
+div.searchresults {
+}
+
+div.searchresults h2 {
+	font-size: .9em;
+	color: #278FCF;
+	border-bottom: 2px solid #278FCF;
+}
+
+div.searchresults table.filesdisplay {
+	width: 80% !important;
+	border-collapse: collapse;
+	text-align: left;
+	margin-bottom: 20px;
+}
+/* fin SearchResults */
+
+/*******************
+ * FilesDisplay
+ ***/
+table.filesdisplay {
+	margin: auto;
+	width: 95%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table.filesdisplay th {
+	border-bottom: 1px solid #c9d0e0;
+}
+table.filesdisplay tr.p {
+	
+}
+table.filesdisplay tr.s {
+	background-color: #c9d0e0;
+}
+
+/* fin FilesDisplay */
+
+/*******************
+ * Footer
+ ***/
+div#appfooter {
+	margin: auto;
+	width: 80%;
+	border-top: 1px solid #c9d0e0;
+	font-size: .8em;
+	text-align: center;
+}
+div#appfooter a {
+	color: #3a3a3a;
+}
+/* fin Footer */

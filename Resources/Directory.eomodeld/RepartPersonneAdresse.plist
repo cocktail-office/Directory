@@ -1,0 +1,69 @@
+{
+    attributes = (
+        {
+            columnName = "ADR_ORDRE"; 
+            externalType = NUMBER; 
+            name = adrOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "E_MAIL"; 
+            externalType = VARCHAR2; 
+            name = eMail; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "RPA_PRINCIPAL"; 
+            externalType = VARCHAR2; 
+            name = rpaPrincipal; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "RPA_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = rpaValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "TADR_CODE"; 
+            externalType = VARCHAR2; 
+            name = tadrCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, adrOrdre, eMail, rpaPrincipal, rpaValide, tadrCode); 
+    className = "org.cocktail.directory.eof.server.EORepartPersonneAdresse"; 
+    classProperties = (eMail, rpaPrincipal, rpaValide, adresse); 
+    externalName = "REPART_PERSONNE_ADRESSE"; 
+    fetchSpecificationDictionary = {}; 
+    name = RepartPersonneAdresse; 
+    primaryKeyAttributes = (tadrCode, persId, adrOrdre); 
+    relationships = (
+        {
+            destination = Adresse; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = adrOrdre; sourceAttribute = adrOrdre; }); 
+            name = adresse; 
+        }
+    ); 
+    restrictingQualifier = "(rpaValide = 'O')"; 
+}

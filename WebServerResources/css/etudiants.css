@@ -1,0 +1,20 @@
+/**
+ * personnel.css
+ * Gere l'apparence de l'annuaire etudiant
+ */
+ 
+.directories #etudiant {
+	background: url(img/dir_etudiant.png) no-repeat left;
+}
+
+/*******************
+ * SearchResults
+ ***/
+div.searchresults div#etudiant tr.s {
+	background-color: #E8EFF7;
+}
+div.searchresults div#etudiant h2 {
+	color: #25314A;
+	border-bottom: 2px solid #25314A;
+}
+/* fin SearchResults */

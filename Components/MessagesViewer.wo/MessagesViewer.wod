@@ -1,0 +1,24 @@
+Div : WOGenericContainer {
+	elementName = "div";
+	class = divClass;
+}
+
+IsError : WOConditional { condition = isError; }
+IsInfo : WOConditional { condition = isInformation; }
+IsExcep : WOConditional { condition = isException; }
+
+IsLinkToMain : WOConditional { condition = isLinkToMain; }
+
+TError : WOString { value = session.localizedStrings.TError; //VALID
+ }
+TErrorMsg : WOString { value = errorMessage; escapeHTML = false; }
+TReturn : WOString { value = session.localizedStrings.TReturnToMain; //VALID
+ }
+
+TMsg : WOString { 
+	value = getMessage; 
+	escapeHTML = false;
+}
+
+LinkMain : WOHyperlink { directActionName = "default"; }
+

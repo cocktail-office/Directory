@@ -1,0 +1,146 @@
+{
+    compteIndividu = {
+        class = EOFetchSpecification; 
+        entityName = Compte; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartCompte.persId"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cptLogin; 
+                    selectorName = isNotEqualTo; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cptDomaine; 
+                    selectorName = isNotEqualTo; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isEqualTo; 
+                            value = P; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isEqualTo; 
+                            value = R; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isEqualTo; 
+                            value = E; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+    }; 
+    emailEtudiant = {
+        class = EOFetchSpecification; 
+        entityName = Compte; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartCompte.persId"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cptEmail; 
+                    selectorName = isNotEqualTo; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cptDomaine; 
+                    selectorName = isNotEqualTo; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isLike; 
+                            value = "*E"; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isEqualTo; 
+                            value = R; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+    }; 
+    emailPrincipalIndividu = {
+        class = EOFetchSpecification; 
+        entityName = Compte; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartCompte.persId"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cptEmail; 
+                    selectorName = isNotEqualTo; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cptDomaine; 
+                    selectorName = isNotEqualTo; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isEqualTo; 
+                            value = P; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = cptVlan; 
+                            selectorName = isEqualTo; 
+                            value = R; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+    }; 
+}

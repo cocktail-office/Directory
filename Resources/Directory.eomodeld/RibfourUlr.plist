@@ -1,0 +1,168 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = BIC; 
+            externalType = VARCHAR2; 
+            name = bic; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 11; 
+        }, 
+        {
+            columnName = "C_BANQUE"; 
+            externalType = VARCHAR2; 
+            name = cBanque; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = "C_GUICHET"; 
+            externalType = VARCHAR2; 
+            name = cGuichet; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CLE_RIB"; 
+            externalType = VARCHAR2; 
+            name = cleRib; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            columnName = "FOU_ORDRE"; 
+            externalType = NUMBER; 
+            name = fouOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = IBAN; 
+            externalType = VARCHAR2; 
+            name = iban; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 34; 
+        }, 
+        {
+            columnName = "MOD_CODE"; 
+            externalType = VARCHAR2; 
+            name = modCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            columnName = "NO_COMPTE"; 
+            externalType = VARCHAR2; 
+            name = noCompte; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 11; 
+        }, 
+        {
+            columnName = "RIB_ORDRE"; 
+            externalType = NUMBER; 
+            name = ribOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "RIB_TITCO"; 
+            externalType = VARCHAR2; 
+            name = ribTitco; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "RIB_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = ribValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "TEM_PAYE_UTIL"; 
+            externalType = VARCHAR2; 
+            name = temPayeUtil; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        ribOrdre, 
+        fouOrdre, 
+        cBanque, 
+        cGuichet, 
+        noCompte, 
+        cleRib, 
+        ribTitco, 
+        modCode, 
+        ribValide, 
+        dCreation, 
+        dModification, 
+        temPayeUtil, 
+        bic, 
+        iban
+    ); 
+    className = "org.cocktail.directory.eof.server.EORibfourUlr"; 
+    classProperties = (
+        fouOrdre, 
+        cBanque, 
+        cGuichet, 
+        noCompte, 
+        cleRib, 
+        ribTitco, 
+        modCode, 
+        ribValide, 
+        dCreation, 
+        dModification, 
+        temPayeUtil, 
+        bic, 
+        iban
+    ); 
+    externalName = "GRHUM.RIBFOUR_ULR"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            fouOrdre, 
+            cBanque, 
+            cGuichet, 
+            noCompte, 
+            cleRib, 
+            ribTitco, 
+            modCode, 
+            ribValide, 
+            dCreation, 
+            dModification, 
+            temPayeUtil, 
+            bic, 
+            iban
+        ); 
+    }; 
+    name = RibfourUlr; 
+    primaryKeyAttributes = (ribOrdre); 
+}

@@ -1,0 +1,16 @@
+LoopRoots : WORepetition {
+	list = listRootRecords;
+	item = currentRoot;
+}
+
+TreeView : DTreeView {
+	directory = directory;
+	pathway = pathway;
+	typeRequestItem = typeRequestItem;
+	currentRecord = currentRoot;
+	libelKey = pathway.methodNameForLabel;
+	sonsKey = pathway.methodNameGivingSons;
+	selectionKey = "selectedNode";
+	selectionTextColor = "#AF270A";
+	openLevel = pathway.nbNodesToExpand;
+}

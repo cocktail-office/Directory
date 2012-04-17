@@ -1,0 +1,25 @@
+{
+    attributes = (
+        {
+            columnName = "FON_ID_INTERNE"; 
+            externalType = VARCHAR2; 
+            name = fonIdInterne; 
+            valueClassName = NSString; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (persId, fonIdInterne); 
+    className = "org.cocktail.directory.eof.server.EOVDroitsAnnuaireWeb"; 
+    classProperties = (persId, fonIdInterne); 
+    externalName = "V_DROITS_ANNUAIRE_WEB"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_nameInObjectStore" = "V_DROITS_ANNUAIRE"; }; 
+    name = VDroitsAnnuaireWeb; 
+    primaryKeyAttributes = (fonIdInterne, persId); 
+}

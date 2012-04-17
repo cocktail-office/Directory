@@ -1,0 +1,38 @@
+ItemIdentification : WOString { value = item.displayString; }
+
+LMailAlias : WOString { value = session.localizedStrings.LMailAlias; //VALID
+ }
+LFunctions : WOString { value = session.localizedStrings.LFunctions; //VALID
+ }
+LMembers   : WOString { value = session.localizedStrings.LMembers; //VALID
+ }
+
+ValMailAlias : MailtoLink {
+	mail = item.adresseEmail;
+	mailLabel = item.adresseEmail;
+	showMailIcon = true; 
+}
+
+ValFunctions : WOString { value = item.fonctionsGroupe; }
+
+TableChildren : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = directoryForMembers;
+	listObjects = displayGroup.displayedObjects;
+	fields = getSummaryFieldsForMembers;
+	useHyperLink = shouldLinkToDetails;
+	typeRequestItem = typeRequestItem;
+}
+
+FormNavObjects: WOForm {
+	name="navobjform2";
+}
+
+ObjectsNavBar : CktlNavigationBar {
+	displayGroup = displayGroup;
+	shortPageList = false;
+	textMode = false;
+	longListLimit = 15;
+}

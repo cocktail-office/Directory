@@ -1,0 +1,103 @@
+CurrentValue : WOString {
+	value = valueForField;
+}
+
+ValueCurrentObjectInArray : WOString {
+	value = valueCurrentObjectInArray;
+}
+
+RepList : WORepetition {
+	list = arrayValueForField;
+	item = currentObjectInArray;
+}
+
+TableCell : WOGenericContainer {
+	elementName = "td";
+	onmouseover = tdOnMouseOver;
+	 onmouseout = "return nd();";
+}
+
+
+CurrentTooltipValue : WOString {
+	value = valueForFieldTooltip;
+}
+
+CurrentSpecificLinkValue : WOString {
+	value = specificLinkValue;
+	escapeHTML = false;
+}
+
+CurrentLinkValue : WOHyperlink {
+	string = valueForField;
+	directActionName = directory.woDirActionName;
+	queryDictionary = queryParameters;
+	
+}
+
+CurrentLinkObjectInArray : WOHyperlink {
+	string = valueCurrentObjectInArray;
+	directActionName = directory.woDirActionName;
+	queryDictionary = queryParameters;
+}
+
+RepHeadersForValues : WORepetition {
+	list = fields;
+	item = currentFieldForValue;
+}
+
+RepHeaders : WORepetition {
+	list = fields;
+	item = currentField;
+}
+
+RepObjects : WORepetition {
+	list = listObjects;
+	item = currentObject;
+	index = objIndex;
+}
+
+HeaderElement : WOString {
+	value = getLocalizedHeader;
+}
+
+TableContainer : WOGenericContainer {
+	elementName = "table";
+	class = cssClsTable;
+}
+
+TableRowBody : WOGenericContainer {
+	elementName = "tr";
+	class = getClassForCurrentIndex;
+}
+
+TableHead : WOGenericContainer { elementName = "thead"; }
+
+BoolHasTooltip : WOConditional { condition = fieldHasTooltip; }
+
+BoolHasNoTooltip : WOConditional {
+	condition = fieldHasTooltip;
+	negate = true;
+}
+
+BoolUseHyperLink : WOConditional { condition = isUseHyperLink; }
+
+BoolSpecificLink : WOConditional { condition = isSpeLink; }
+
+BoolDontUseHyperLink : WOConditional {condition = dontUseHyperLink; }
+
+BoolMailtoLink : WOConditional { condition = isMailtoLink; }
+
+AMailto : MailtoLink {
+	mail = valueForField;
+	mailLabel = valueForField;
+	showMailIcon = true;
+}
+
+BoolDisplayAList : WOConditional {
+	condition = isCurrentFieldAList;
+}
+
+BoolDisplaySimpleField : WOConditional {
+	condition = isCurrentFieldAList;
+	negate = true;
+}

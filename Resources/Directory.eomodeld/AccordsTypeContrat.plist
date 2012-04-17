@@ -1,0 +1,103 @@
+{
+    attributes = (
+        {
+            columnName = "TYCON_ID"; 
+            externalType = NUMBER; 
+            name = tyconId; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "TYCON_ID_INTERNE"; 
+            externalType = VARCHAR2; 
+            name = tyconIdInterne; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TYCON_ID_PERE"; 
+            externalType = NUMBER; 
+            name = tyconIdPere; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TYCON_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = tyconLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TYCON_NATURE"; 
+            externalType = VARCHAR2; 
+            name = tyconNature; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TYCON_NIVEAU"; 
+            externalType = NUMBER; 
+            name = tyconNiveau; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TYCON_RECHERCHE"; 
+            externalType = VARCHAR2; 
+            name = tyconRecherche; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        tyconId, 
+        tyconIdPere, 
+        tyconLibelle, 
+        tyconNature, 
+        tyconRecherche, 
+        tyconNiveau, 
+        tyconIdInterne
+    ); 
+    className = "org.cocktail.directory.eof.server.EOAccordsTypeContrat"; 
+    classProperties = (
+        tyconIdPere, 
+        tyconLibelle, 
+        tyconNature, 
+        tyconRecherche, 
+        tyconNiveau, 
+        tyconIdInterne, 
+        parent, 
+        sons, 
+        tyconId
+    ); 
+    externalName = "ACCORDS.TYPE_CONTRAT"; 
+    name = AccordsTypeContrat; 
+    primaryKeyAttributes = (tyconId); 
+    relationships = (
+        {
+            destination = AccordsTypeContrat; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = tyconId; sourceAttribute = tyconIdPere; }); 
+            name = parent; 
+        }, 
+        {
+            destination = AccordsTypeContrat; 
+            internalInfo = {"_nameInObjectStore" = accordTypeContrats; }; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = tyconIdPere; sourceAttribute = tyconId; }); 
+            name = sons; 
+        }
+    ); 
+}

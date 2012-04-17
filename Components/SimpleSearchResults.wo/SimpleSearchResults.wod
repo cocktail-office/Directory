@@ -1,0 +1,14 @@
+LoopDirectories : WORepetition {
+	list = listDirectories;
+	item = currentDirectory;
+	index = dirIndex;
+}
+
+CurrentDirSearchResults : DirectorySearchResults {
+	initiallyCollapsed = isInitiallyCollapsed;
+	searchArgs = searchArgs;
+	directory = currentDirectory;
+	typeRequestItem = typeRequestItem;
+	dirIndex = dirIndex;
+}
+

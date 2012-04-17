@@ -1,0 +1,10 @@
+LoopLetters : WORepetition {
+	list = listLetters;
+	item = currentLetter;
+}
+
+LnkFilter : WOHyperlink {
+	action = processFilter;
+	string = currentLetter;
+	class = "filterelem";
+}

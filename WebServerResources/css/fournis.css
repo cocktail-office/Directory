@@ -1,0 +1,20 @@
+/**
+ * fournisseurs.css
+ * Gere l'apparence de l'annuaire des fournisseurs
+ */
+ 
+.directories #fournis {
+	background: url(img/dir_fournis.png) no-repeat left;
+}
+
+/*******************
+ * SearchResults
+ ***/
+div.searchresults div#fournis tr.s {
+	background-color: #E8EFF7;
+}
+div.searchresults div#fournis h2 {
+	color: #25314A;
+	border-bottom: 2px solid #25314A;
+}
+/* fin SearchResults */

@@ -1,0 +1,175 @@
+{
+    faxForPersId = {
+        class = EOFetchSpecification; 
+        entityName = PersonneTelephone; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = persId; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = typeTel; 
+                    selectorName = isNotEqualTo; 
+                    value = PRV; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = typeNo; 
+                    selectorName = isEqualTo; 
+                    value = FAX; 
+                }
+            ); 
+        }; 
+    }; 
+    telFaxProForPersId = {
+        class = EOFetchSpecification; 
+        entityName = PersonneTelephone; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = persId; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = typeTel; 
+                            selectorName = isEqualTo; 
+                            value = INT; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = typeTel; 
+                            selectorName = isEqualTo; 
+                            value = PRF; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+        sortOrderings = ({class = EOSortOrdering; key = typeNo; selectorName = "compareDescending:"; }); 
+    }; 
+    telProForPersId = {
+        class = EOFetchSpecification; 
+        entityName = PersonneTelephone; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = persId; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = typeNo; 
+                    selectorName = isNotEqualTo; 
+                    value = FAX; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = typeTel; 
+                            selectorName = isEqualTo; 
+                            value = INT; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = typeTel; 
+                            selectorName = isEqualTo; 
+                            value = PRF; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+    }; 
+    telephoneIndividu = {
+        class = EOFetchSpecification; 
+        entityName = PersonneTelephone; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = persId; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = typeTel; 
+                    selectorName = isNotEqualTo; 
+                    value = PRV; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = typeNo; 
+                            selectorName = isEqualTo; 
+                            value = TEL; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = typeNo; 
+                            selectorName = isEqualTo; 
+                            value = MOB; 
+                        }
+                    ); 
+                }
+            ); 
+        }; 
+    }; 
+    telephoneProOfPersonInStructure = {
+        class = EOFetchSpecification; 
+        entityName = PersonneTelephone; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "structureUlr.cStructure"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = cStructure; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "structureUlr.temValide"; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = persId; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persIdPerson; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+}

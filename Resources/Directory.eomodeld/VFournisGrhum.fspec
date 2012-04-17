@@ -1,0 +1,137 @@
+{
+    listeClientsFournisseurs = {
+        class = EOFetchSpecification; 
+        entityName = VFournisGrhum; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = fouType; 
+                    selectorName = isEqualTo; 
+                    value = T; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = fouValide; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrCivilite; 
+                    selectorName = isEqualTo; 
+                    value = STR; 
+                }
+            ); 
+        }; 
+    }; 
+    listeFournisseurs = {
+        class = EOFetchSpecification; 
+        entityName = VFournisGrhum; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = fouValide; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrCivilite; 
+                    selectorName = isEqualTo; 
+                    value = STR; 
+                }
+            ); 
+        }; 
+    }; 
+    listeFournisseursIndividus = {
+        class = EOFetchSpecification; 
+        entityName = VFournisGrhum; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = fouValide; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrCivilite; 
+                    selectorName = isNotEqualTo; 
+                    value = STR; 
+                }
+            ); 
+        }; 
+    }; 
+    rechercheFournisseursMoraux = {
+        class = EOFetchSpecification; 
+        entityName = VFournisGrhum; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrNom; 
+                    selectorName = isCaseInsensitiveLike; 
+                    value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = fouValide; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrCivilite; 
+                    selectorName = isEqualTo; 
+                    value = STR; 
+                }
+            ); 
+        }; 
+        sortOrderings = ({class = EOSortOrdering; key = adrNom; selectorName = "compareAscending:"; }); 
+    }; 
+    rechercheFournisseursPhysiques = {
+        class = EOFetchSpecification; 
+        entityName = VFournisGrhum; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrNom; 
+                    selectorName = isCaseInsensitiveLike; 
+                    value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = fouValide; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrCivilite; 
+                    selectorName = isNotEqualTo; 
+                    value = STR; 
+                }
+            ); 
+        }; 
+        sortOrderings = ({class = EOSortOrdering; key = adrNom; selectorName = "compareAscending:"; }); 
+    }; 
+}

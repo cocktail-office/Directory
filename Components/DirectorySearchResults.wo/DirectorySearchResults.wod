@@ -1,0 +1,79 @@
+MessageError : WOString {
+	value = errorMessage;
+	escapeHTML = false;
+}
+
+IsError : ERXNonNullConditional { condition = errorMessage; }
+
+CollapserALink : WOGenericContainer {
+	elementName = "a";
+	onclick = onClickString;
+	id = collapserButtonID;
+	class = collapserALinkInitStyle;
+}
+
+CollapserALinkTitle : WOString { value = localizedDirResultTitle; }
+
+IsNeedAuthentication : WOConditional { condition = directory.needsAuthentication; }
+IsNeedNoAuthentication : WOConditional { condition = directory.needsAuthentication; negate = true; }
+
+IsUserConnected : WOConditional { condition = isUserConnected; }
+IsUserNotConnected : WOConditional { condition = isUserConnected; negate = true; }
+
+CanShowResults : WOConditional { condition = canShowResults; }
+CantShowResults : WOConditional { condition = cantShowResults;}
+
+LinkConnect : WOHyperlink {
+	action = connect;
+	string = session.localizedStrings.TLogin; //VALID
+}
+
+TTHaveToLogin : WOString { value = session.localizedStrings.TTHaveToLogin; //VALID
+ }
+
+TInsufficientPrivilegesDir : WOString { value = session.localizedStrings.TInsufficientPrivilegesDir; //VALID
+ }
+
+ImgLock : WOImage {
+	filename = "css/img/encrypted.gif";
+	framework = "app";
+	border = "0";
+	width = "16";
+	height = "16";
+}
+
+CollapsableDiv : WOGenericContainer {
+	elementName = "div";
+	id = divResultID;
+	class = "tablesearchdiv";
+	style = collapsableDivInitialStyle;
+}
+
+LoopPathways : WORepetition {
+	list = directory.pathways;
+	item = currentPathway;
+}
+
+PathResults : PathwaySearchResults {
+	pathway = currentPathway;
+	typeRequestItem = typeRequestItem;
+	searchArgs = searchArgs;
+}
+
+BoolSearchAtDirLevel : WOConditional { 
+	condition = directory.processSearchAtPathwayLevel; 
+	negate = true;
+}
+
+BoolSearchAtPathLevel : WOConditional { condition = directory.processSearchAtPathwayLevel; }
+	
+ResultsTableDirectory : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = directory;
+	listObjects = dirLevelResult;
+	fields = directory.searchResultFields;
+	useHyperLink = directory.areDetailsAvailable;
+	typeRequestItem = typeRequestItem;
+}

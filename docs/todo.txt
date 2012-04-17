@@ -1,0 +1,10 @@
+Etudiants : 
+
+- Numéro étudiant : Protéger par authentification CAS/Autre.
+
+- Recherche : au moins 3 caractères
+
+- Résultat de recherche : limiter à 30 - Poser une question (préciser la re- cherche) si la réponse n'est pas satisfaisante.
+
+- Limiter le nombre de requetes par IP : AU bout de 10 recherches attendre 1 heure.
+

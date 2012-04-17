@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wodefinitions>
+       	<wo wocomponentcontent="false" class="NavigationBar">
+		<binding name="listPaths"/>
+		</wo>
+</wodefinitions>

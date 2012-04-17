@@ -1,0 +1,20 @@
+/**
+ * personnel.css
+ * Gere l'apparence de l'annuaire personnel
+ */
+ 
+.directories #personnel {
+	background: url(img/dir_personnel.png) no-repeat left;
+}
+
+/*******************
+ * SearchResults
+ ***/
+div.searchresults div#personnel tr.s {
+	background-color: #D4FFAA;
+}
+div.searchresults div#personnel h2 {
+	color: #89DF07;
+	border-bottom: 1px dashed #89DF07;
+}
+/* fin SearchResults */

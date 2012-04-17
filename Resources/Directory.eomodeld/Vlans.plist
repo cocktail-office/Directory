@@ -1,0 +1,116 @@
+{
+    attributes = (
+        {
+            columnName = "C_VLAN"; 
+            externalType = VARCHAR2; 
+            name = cVlan; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = DOMAINE; 
+            externalType = VARCHAR2; 
+            name = domaine; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 200; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LISTE_IP"; 
+            externalType = VARCHAR2; 
+            name = listeIp; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LL_VLAN"; 
+            externalType = VARCHAR2; 
+            name = llVlan; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = PRIORITE; 
+            externalType = NUMBER; 
+            name = priorite; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PRISE_COMPTE"; 
+            externalType = CHAR; 
+            name = priseCompte; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TCRY_ORDRE"; 
+            externalType = NUMBER; 
+            name = tcryOrdre; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TVPN_CODE"; 
+            externalType = VARCHAR2; 
+            name = tvpnCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        cVlan, 
+        llVlan, 
+        dCreation, 
+        dModification, 
+        priorite, 
+        priseCompte, 
+        listeIp, 
+        tcryOrdre, 
+        tvpnCode, 
+        domaine
+    ); 
+    className = "org.cocktail.directory.eof.server.EOVlans"; 
+    classProperties = (
+        llVlan, 
+        dCreation, 
+        dModification, 
+        priorite, 
+        priseCompte, 
+        listeIp, 
+        tcryOrdre, 
+        tvpnCode, 
+        domaine
+    ); 
+    externalName = VLANS; 
+    fetchSpecificationDictionary = {}; 
+    name = Vlans; 
+    primaryKeyAttributes = (cVlan); 
+}

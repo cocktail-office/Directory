@@ -1,0 +1,11 @@
+/**
+ * marches.css
+ * Gere l'apparence de l'annuaire des marches
+ */
+ 
+.directories #marches {
+	background: url(img/dir_marches.png) no-repeat left;
+}
+.directories div#marches {
+	float: right;
+}

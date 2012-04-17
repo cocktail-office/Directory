@@ -1,0 +1,27 @@
+BSubmit: WOSubmitButton {
+	action = logon;
+	class = "button";
+	name = "go";
+	value = "Connexion";
+}
+
+Form1: WOForm {
+}
+
+IsError : WOConditional {
+	condition = hasErrors;
+}
+
+TError : WOString { value = errorMessage; }
+
+TLogin: WOTextField {
+	id = "login";
+	name = "login";
+	value = login;
+}
+
+TPassword: WOPasswordField {
+	id = "passwd";
+	name = "passwd";
+	value = password;
+}

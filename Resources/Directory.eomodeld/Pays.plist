@@ -1,0 +1,104 @@
+{
+    attributes = (
+        {
+            columnName = "C_PAYS"; 
+            externalType = VARCHAR2; 
+            name = cPays; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CODE_ISO"; 
+            externalType = VARCHAR2; 
+            name = codeIso; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_DEB_VAL"; 
+            externalType = DATE; 
+            name = dDebVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_FIN_VAL"; 
+            externalType = DATE; 
+            name = dFinVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "L_NATIONALITE"; 
+            externalType = VARCHAR2; 
+            name = lNationalite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LC_PAYS"; 
+            externalType = VARCHAR2; 
+            name = lcPays; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LL_PAYS"; 
+            externalType = VARCHAR2; 
+            name = llPays; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        cPays, 
+        llPays, 
+        lcPays, 
+        lNationalite, 
+        dDebVal, 
+        dFinVal, 
+        dCreation, 
+        dModification, 
+        codeIso
+    ); 
+    className = "org.cocktail.directory.eof.server.EOPays"; 
+    classProperties = (
+        llPays, 
+        lcPays, 
+        lNationalite, 
+        dDebVal, 
+        dFinVal, 
+        dCreation, 
+        dModification, 
+        codeIso
+    ); 
+    externalName = PAYS; 
+    fetchSpecificationDictionary = {}; 
+    name = Pays; 
+    primaryKeyAttributes = (cPays); 
+}

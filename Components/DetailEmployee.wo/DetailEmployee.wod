@@ -1,0 +1,78 @@
+BoolPhoto : WOConditional { condition = item.hasPhoto; }
+
+Photo : InMemoryImageElement {
+	data = item.datasPhoto;
+	mimeType = "image/jpeg";
+	width = 75;
+}
+
+LinkProfil : WOHyperlink {
+	href = app.linkProfil;
+	target = "blank";
+}
+
+IsProfil : WOConditional {
+	condition = isLinkProfilProvided;
+}
+
+IsDispSupannCategory : WOConditional { condition = isDispSupannCategory; }
+
+LContact : WOString { value = session.localizedStrings.LContact; //VALID
+}
+
+LDepartLabs  : WOString { value = session.localizedStrings.LDepartLabs; //VALID
+ }
+
+
+HEmail : WOString { value = session.localizedStrings.LMail; //VALID
+ }
+LQuality : WOString { value = session.localizedStrings.LQuality; //VALID
+ }
+LCategory : WOString { value = session.localizedStrings.LCategory; //VALID
+ }
+LAdrInternet : WOString { value = session.localizedStrings.LAdrInternet; //VALID
+ }
+
+ValMail : MailtoLink {
+	mail = item.emailPrincipalIndividu;
+	mailLabel = item.emailPrincipalIndividu;
+	showMailIcon = true;
+}
+
+ValQuality : WOString { value = item.indQualite; }
+ValCategory : WOString { value = item.catLibelle2; }
+
+
+HAdress : WOString { value = session.localizedStrings.LAdress; //VALID
+ }
+
+LinesAdress : WORepetition {
+	list = item.adresseProIndividu;
+	item = currentLineAdress;
+}
+
+ElemAdress : WOString { value = currentLineAdress; }
+
+ElemURL : WOHyperlink {
+	href = currentAdresseWeb;
+	string = session.localizedStrings.LVisitWebSite; //VALID
+	class = "hyperlink";
+	target = "blank";
+}
+
+LinesURL : WORepetition {
+	list = item.adresseWeb;
+	item = currentAdresseWeb;
+}
+
+ItemIdentification : WOString { value = getItemIdentification; }
+
+
+TableOfServices : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	listObjects = getServicesForPersonne;
+	fields = fieldsForService;
+	useHyperLink = false;
+}

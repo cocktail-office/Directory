@@ -1,0 +1,35 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "DATAS_PHOTO"; 
+            externalType = "LONG RAW"; 
+            name = datasPhoto; 
+            valueClassName = NSData; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = Number; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (datasPhoto, noIndividu); 
+    className = "org.cocktail.directory.eof.server.EOPhotosEtudiantsGrhum"; 
+    classProperties = (datasPhoto, noIndividu, individuUlr); 
+    externalName = "PHOTOS_ETUDIANTS_GRHUM@BLOBS.WORLD"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_nameInObjectStore" = "PHOTOS_ETUDIANTS_GRHUM"; }; 
+    name = PhotosEtudiantsGrhum; 
+    primaryKeyAttributes = (noIndividu); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividu; }); 
+            name = individuUlr; 
+        }
+    ); 
+}

@@ -1,0 +1,516 @@
+{
+    listElectedStudentsStructs = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartTypeGroupes.tgrpCode"; 
+                    selectorName = "isEqualTo:"; 
+                    value = EL; 
+                }
+            ); 
+        }; 
+    }; 
+    listFils = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyComparisonQualifier; 
+                    leftKey = cStructure; 
+                    rightKey = cStructurePere; 
+                    selectorName = "isNotEqualTo:"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cStructurePere; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = parentId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+        usesDistinct = YES; 
+    }; 
+    listGrpInstitFils = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cStructurePere; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = parentId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cTypeStructure; 
+                    selectorName = "isEqualTo:"; 
+                    value = GI; 
+                }, 
+                {
+                    class = EOKeyComparisonQualifier; 
+                    leftKey = cStructure; 
+                    rightKey = cStructurePere; 
+                    selectorName = "isNotEqualTo:"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = {class = EONull; }; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = lcStructure; 
+                selectorName = "compareAscending:"; 
+            }
+        ); 
+        usesDistinct = YES; 
+    }; 
+    listGrpMailFils = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyComparisonQualifier; 
+                    leftKey = cStructure; 
+                    rightKey = cStructurePere; 
+                    selectorName = "isNotEqualTo:"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cStructurePere; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = parentId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAlias; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = {class = EONull; }; 
+                }
+            ); 
+        }; 
+    }; 
+    listMailGroups = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAlias; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+        usesDistinct = YES; 
+    }; 
+    listMailGroupsForTypeGroupe = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAlias; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartTypeGroupes.tgrpCode"; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = tgrpCode; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = llStructure; 
+                selectorName = "compareAscending:"; 
+            }
+        ); 
+        usesDistinct = YES; 
+    }; 
+    listMailingLists = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartTypeGroupes.tgrpCode"; 
+                    selectorName = "isEqualTo:"; 
+                    value = F; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAcces; 
+                    selectorName = "isEqualTo:"; 
+                    value = "+"; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = llStructure; 
+                selectorName = "compareAscending:"; 
+            }
+        ); 
+        usesDistinct = YES; 
+    }; 
+    listServicesFils = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cStructurePere; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = parentId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }, 
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "repartTypeGroupes.tgrpCode"; 
+                            selectorName = "isEqualTo:"; 
+                            value = A; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "repartTypeGroupes.tgrpCode"; 
+                            selectorName = "isEqualTo:"; 
+                            value = S; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "repartTypeGroupes.tgrpCode"; 
+                            selectorName = "isEqualTo:"; 
+                            value = LA; 
+                        }
+                    ); 
+                }, 
+                {
+                    class = EOKeyComparisonQualifier; 
+                    leftKey = cStructure; 
+                    rightKey = cStructurePere; 
+                    selectorName = "isNotEqualTo:"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAcces; 
+                    selectorName = "isEqualTo:"; 
+                    value = "+"; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = lcStructure; 
+                selectorName = "compareAscending:"; 
+            }
+        ); 
+        usesDistinct = YES; 
+    }; 
+    racinesDiplomes = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = llStructure; 
+                    selectorName = "isEqualTo:"; 
+                    value = "DIPLOME%"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+    }; 
+    rechercheGroupeMail = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = llStructure; 
+                            selectorName = "isCaseInsensitiveLike:"; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = lcStructure; 
+                            selectorName = "isCaseInsensitiveLike:"; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = grpAlias; 
+                            selectorName = "isCaseInsensitiveLike:"; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }
+                    ); 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAlias; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartTypeGroupes.tgrpCode"; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = F; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAcces; 
+                    selectorName = "isEqualTo:"; 
+                    value = "+"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+        usesDistinct = YES; 
+    }; 
+    rechercheListeDiffusion = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = llStructure; 
+                            selectorName = "isCaseInsensitiveLike:"; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = grpAlias; 
+                            selectorName = "isCaseInsensitiveLike:"; 
+                            value = {"_key" = criterion; class = EOQualifierVariable; }; 
+                        }
+                    ); 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAlias; 
+                    selectorName = "isNotEqualTo:"; 
+                    value = {class = EONull; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartTypeGroupes.tgrpCode"; 
+                    selectorName = "isEqualTo:"; 
+                    value = F; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = grpAcces; 
+                    selectorName = "isEqualTo:"; 
+                    value = "+"; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+        usesDistinct = YES; 
+    }; 
+    servicesForPersId = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOOrQualifier; 
+                    qualifiers = (
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "repartTypeGroupes.tgrpCode"; 
+                            selectorName = "isEqualTo:"; 
+                            value = S; 
+                        }, 
+                        {
+                            class = EOKeyValueQualifier; 
+                            key = "repartTypeGroupes.tgrpCode"; 
+                            selectorName = "isEqualTo:"; 
+                            value = LA; 
+                        }
+                    ); 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartStructures.persId"; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = llStructure; 
+                selectorName = "compareAscending:"; 
+            }
+        ); 
+        usesDistinct = YES; 
+    }; 
+    structuresForParent = {
+        class = EOFetchSpecification; 
+        entityName = StructureUlr; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = cStructurePere; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = ParentId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartTypeGroupes.tgrpCode"; 
+                    selectorName = "isEqualTo:"; 
+                    value = S; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = temValide; 
+                    selectorName = "isEqualTo:"; 
+                    value = O; 
+                }
+            ); 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = llStructure; 
+                selectorName = "compareAscending:"; 
+            }
+        ); 
+    }; 
+}

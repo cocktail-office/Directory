@@ -1,0 +1,26 @@
+PathwayTitle : WOString { value = pathwayTitle; }
+
+CanShowResults : WOConditional { condition = canShowResults; }
+CantShowResults : WOConditional { condition = canShowResults; negate = true; }
+
+LinkConnect : WOHyperlink {
+	action = connect;
+	string = session.localizedStrings.TLogin; //VALID
+}
+
+TTHaveToLogin : WOString { value = session.localizedStrings.TTHaveToLogin; //VALID
+ }
+
+
+
+ResultsTablePathway : GenericHtmlTable {
+	cssClsTable = "filesdisplay";
+	cssOddRow = "odd";
+	cssEvenRow = "even";
+	directory = pathway.getDirectory;
+	pathway = pathway;
+	listObjects = pathwayResults;
+	fields = pathway.searchResultFields;
+	useHyperLink = pathway.getDirectory.areDetailsAvailable;
+	typeRequestItem = theTypeRequestItem;
+}

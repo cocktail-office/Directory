@@ -1,0 +1,113 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_DEB_VAL"; 
+            externalType = DATE; 
+            name = dDebVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "D_FIN_VAL"; 
+            externalType = DATE; 
+            name = dFinVal; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = INDICATIF; 
+            externalType = NUMBER; 
+            name = indicatif; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LISTE_ROUGE"; 
+            externalType = VARCHAR2; 
+            name = listeRouge; 
+            valueClassName = NSString; 
+            width = 1; 
+        }, 
+        {
+            columnName = "NO_TELEPHONE"; 
+            externalType = VARCHAR2; 
+            name = noTelephone; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 14; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "TYPE_NO"; 
+            externalType = VARCHAR2; 
+            name = typeNo; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            columnName = "TYPE_TEL"; 
+            externalType = VARCHAR2; 
+            name = typeTel; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 4; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        persId, 
+        noTelephone, 
+        typeNo, 
+        typeTel, 
+        dDebVal, 
+        dFinVal, 
+        indicatif, 
+        cStructure, 
+        listeRouge
+    ); 
+    className = "org.cocktail.directory.eof.server.EOPersonneTelephone"; 
+    classProperties = (
+        dDebVal, 
+        dFinVal, 
+        indicatif, 
+        cStructure, 
+        typeNo, 
+        typeTel, 
+        noTelephone, 
+        structureUlr, 
+        listeRouge
+    ); 
+    externalName = "PERSONNE_TELEPHONE"; 
+    internalInfo = {"_nameInObjectStore" = "PERSONNE_TELEPHONE"; }; 
+    name = PersonneTelephone; 
+    primaryKeyAttributes = (typeTel, typeNo, persId, noTelephone); 
+    relationships = (
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = structureUlr; 
+        }
+    ); 
+    restrictingQualifier = "listeRouge='N'"; 
+}

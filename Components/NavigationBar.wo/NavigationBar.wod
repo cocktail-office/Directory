@@ -1,0 +1,17 @@
+PathLink: WOHyperlink {
+	directActionName = currentPath.directActionName;
+	string = currentPathDisplayString;
+	queryDictionary = currentPath.queryArgs;
+	class = currentPath.specificClass;
+}
+
+RepetitionPaths: WORepetition {
+	item = currentPath;
+	list = listPaths;
+	index = pathIndex;
+}
+
+LI : WOGenericContainer {
+	elementName = "li";
+	class = getLiStyle;
+}

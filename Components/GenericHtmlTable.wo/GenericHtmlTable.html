@@ -1,0 +1,60 @@
+<webobject name="TableContainer">
+
+<webobject name="TableHead">
+<tr>
+<webobject name="RepHeaders">
+<th><webobject name="HeaderElement"></webobject></th>
+</webobject>
+</tr>
+</webobject>
+
+<webobject name="RepObjects">
+
+<webobject name="TableRowBody">
+	<webobject name="RepHeadersForValues">
+		
+		<webobject name = "TableCell">	
+			
+			<webobject name="BoolDisplaySimpleField">
+			
+				<webobject name="BoolMailtoLink">
+					<webobject name="AMailto"></webobject>
+				</webobject>
+				
+				<webobject name="BoolSpecificLink">
+					<webobject name="CurrentSpecificLinkValue"></webobject>
+				</webobject>
+			
+				<webobject name="BoolUseHyperLink">
+					<webobject name="CurrentLinkValue"></webobject>
+				</webobject>
+				
+				<webobject name="BoolDontUseHyperLink">
+					<webobject name="CurrentValue"></webobject>
+				</webobject>
+			</webobject>
+
+			<webobject name="BoolDisplayAList">
+
+				<webobject name="BoolUseHyperLink">
+						<webobject name="RepList">
+						<webobject name="CurrentLinkObjectInArray"></webobject><br/>
+						</webobject>
+				</webobject>
+
+				<webobject name="BoolDontUseHyperLink">
+						<webobject name="RepList">
+						<webobject name="ValueCurrentObjectInArray"></webobject><br/>
+						</webobject>
+				</webobject>
+
+			</webobject>
+
+		</webobject>
+		
+	</webobject>
+</webobject>
+
+</webobject>
+
+</webobject>

@@ -1,0 +1,122 @@
+{
+    attributes = (
+        {
+            columnName = "C_STRUCTURE"; 
+            externalType = VARCHAR2; 
+            name = cStructure; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DATE_ENTREE"; 
+            externalType = DATE; 
+            name = dateEntree; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DATE_SORTIE"; 
+            externalType = DATE; 
+            name = dateSortie; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "INTERET_CONTACT"; 
+            externalType = VARCHAR2; 
+            name = interetContact; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 500; 
+        }, 
+        {
+            columnName = "NO_INDIVIDU"; 
+            externalType = NUMBER; 
+            name = noIndividu; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = PRIORITE; 
+            externalType = NUMBER; 
+            name = priorite; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = RESPONSABILITE; 
+            externalType = VARCHAR2; 
+            name = responsabilite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = SERVICE; 
+            externalType = VARCHAR2; 
+            name = service; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = TITRE; 
+            externalType = VARCHAR2; 
+            name = titre; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        noIndividu, 
+        cStructure, 
+        dateEntree, 
+        dateSortie, 
+        titre, 
+        service, 
+        responsabilite, 
+        interetContact, 
+        priorite
+    ); 
+    className = "org.cocktail.directory.eof.server.EORepartEmploi"; 
+    classProperties = (
+        dateEntree, 
+        dateSortie, 
+        titre, 
+        service, 
+        responsabilite, 
+        interetContact, 
+        priorite, 
+        individuUlr, 
+        structureUlr
+    ); 
+    externalName = "REPART_EMPLOI"; 
+    fetchSpecificationDictionary = {}; 
+    name = RepartEmploi; 
+    primaryKeyAttributes = (noIndividu, cStructure); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = noIndividu; sourceAttribute = noIndividu; }); 
+            name = individuUlr; 
+        }, 
+        {
+            destination = StructureUlr; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = cStructure; sourceAttribute = cStructure; }); 
+            name = structureUlr; 
+        }
+    ); 
+}

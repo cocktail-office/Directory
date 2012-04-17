@@ -1,0 +1,37 @@
+{
+    adresseProIndividu = {
+        class = EOFetchSpecification; 
+        entityName = Adresse; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartPersonneAdresse.persId"; 
+                    selectorName = isEqualTo; 
+                    value = {"_key" = persId; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = adrListeRouge; 
+                    selectorName = isEqualTo; 
+                    value = N; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartPersonneAdresse.rpaValide"; 
+                    selectorName = isEqualTo; 
+                    value = O; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = "repartPersonneAdresse.tadrCode"; 
+                    selectorName = isEqualTo; 
+                    value = PRO; 
+                }
+            ); 
+        }; 
+    }; 
+}

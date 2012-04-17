@@ -1,0 +1,315 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "ADR_ADRESSE1"; 
+            externalType = VARCHAR2; 
+            name = adrAdresse1; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_ADRESSE2"; 
+            externalType = VARCHAR2; 
+            name = adrAdresse2; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 40; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_BP"; 
+            externalType = VARCHAR2; 
+            name = adrBp; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 7; 
+        }, 
+        {
+            columnName = "ADR_CIVILITE"; 
+            externalType = VARCHAR2; 
+            name = adrCivilite; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_CP"; 
+            externalType = VARCHAR2; 
+            name = adrCp; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_CP_ETRANGER"; 
+            externalType = VARCHAR2; 
+            name = adrCpEtranger; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            columnName = "ADR_NOM"; 
+            externalType = VARCHAR2; 
+            name = adrNom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 120; 
+        }, 
+        {
+            columnName = "ADR_ORDRE"; 
+            externalType = NUMBER; 
+            name = adrOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_PRENOM"; 
+            externalType = VARCHAR2; 
+            name = adrPrenom; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ADR_VILLE"; 
+            externalType = VARCHAR2; 
+            name = adrVille; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 60; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "AGT_ORDRE"; 
+            externalType = NUMBER; 
+            name = agtOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "CPT_ORDRE"; 
+            externalType = NUMBER; 
+            name = cptOrdre; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = "D_CREATION"; 
+            externalType = DATE; 
+            name = dCreation; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "D_MODIFICATION"; 
+            externalType = DATE; 
+            name = dModification; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "FOU_CODE"; 
+            externalType = VARCHAR2; 
+            name = fouCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 10; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "FOU_DATE"; 
+            externalType = DATE; 
+            name = fouDate; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "FOU_ETRANGER"; 
+            externalType = CHAR; 
+            name = fouEtranger; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            columnName = "FOU_MARCHE"; 
+            externalType = CHAR; 
+            name = fouMarche; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1; 
+        }, 
+        {
+            columnName = "FOU_ORDRE"; 
+            externalType = NUMBER; 
+            name = fouOrdre; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "FOU_TYPE"; 
+            externalType = VARCHAR2; 
+            name = fouType; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "FOU_VALIDE"; 
+            externalType = VARCHAR2; 
+            name = fouValide; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = PAYS; 
+            externalType = VARCHAR2; 
+            name = pays; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 20; 
+        }, 
+        {
+            columnName = "PERS_ID"; 
+            externalType = NUMBER; 
+            name = persId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        fouOrdre, 
+        persId, 
+        adrOrdre, 
+        fouCode, 
+        fouDate, 
+        fouMarche, 
+        fouValide, 
+        agtOrdre, 
+        fouType, 
+        dCreation, 
+        dModification, 
+        cptOrdre, 
+        fouEtranger, 
+        adrAdresse1, 
+        adrAdresse2, 
+        adrCp, 
+        adrVille, 
+        adrBp, 
+        adrCpEtranger, 
+        pays, 
+        adrNom, 
+        adrPrenom, 
+        adrCivilite
+    ); 
+    className = "org.cocktail.directory.eof.server.EOVFournisGrhum"; 
+    classProperties = (
+        fouOrdre, 
+        persId, 
+        adrOrdre, 
+        fouCode, 
+        fouDate, 
+        fouMarche, 
+        fouValide, 
+        agtOrdre, 
+        fouType, 
+        dCreation, 
+        dModification, 
+        cptOrdre, 
+        fouEtranger, 
+        adrAdresse1, 
+        adrAdresse2, 
+        adrCp, 
+        adrVille, 
+        adrBp, 
+        adrCpEtranger, 
+        pays, 
+        adrNom, 
+        adrPrenom, 
+        adrCivilite, 
+        individuUlrs, 
+        structuresUlr, 
+        repartPersonneAdresses, 
+        ribfours
+    ); 
+    externalName = "V_FOURNIS_GRHUM"; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            fouOrdre, 
+            persId, 
+            adrOrdre, 
+            fouCode, 
+            fouDate, 
+            fouMarche, 
+            fouValide, 
+            agtOrdre, 
+            fouType, 
+            dCreation, 
+            dModification, 
+            cptOrdre, 
+            fouEtranger, 
+            adrAdresse1, 
+            adrAdresse2, 
+            adrCp, 
+            adrVille, 
+            adrBp, 
+            adrCpEtranger, 
+            pays, 
+            adrNom, 
+            adrPrenom, 
+            adrCivilite, 
+            individuUlrs, 
+            structuresUlr, 
+            repartPersonneAdresses, 
+            ribfours
+        ); 
+    }; 
+    isReadOnly = Y; 
+    name = VFournisGrhum; 
+    primaryKeyAttributes = (persId); 
+    relationships = (
+        {
+            destination = IndividuUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = individuUlrs; 
+        }, 
+        {
+            destination = RepartPersonneAdresse; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = repartPersonneAdresses; 
+        }, 
+        {
+            destination = RibfourUlr; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fouOrdre; sourceAttribute = fouOrdre; }); 
+            name = ribfours; 
+        }, 
+        {
+            destination = StructureUlr; 
+            internalInfo = {"_nameInObjectStore" = Relationship; }; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = persId; sourceAttribute = persId; }); 
+            name = structuresUlr; 
+        }
+    ); 
+}
